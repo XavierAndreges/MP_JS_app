@@ -1,0 +1,45 @@
+name: Deploy to OVH
+
+on:
+  push:
+    branches: [ main ]  # Déclenche le déploiement sur la branche main
+  workflow_dispatch:    # Permet de déclencher manuellement le déploiement
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'
+        
+    - name: Deploy to OVH via FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./
+        server-dir: ${{ secrets.FTP_SERVER_DIR }}
+        dangerous-clean-slate: false # Ne pas supprimer les fichiers existants
+        exclude: |
+          .git/**
+          **/.git/**
+          **/.git*
+          **/.github/**
+          .gitignore
+          README.md
+          API/config.php
+          **/.DS_Store
+          **/Thumbs.db
+        
+    - name: Verify deployment
+      run: |
+        echo "Vérification du déploiement..."
+        echo "N'oubliez pas de déployer manuellement le fichier API/config.php"
+        echo "Le déploiement a été effectué sur : ${{ secrets.FTP_SERVER }}" 
