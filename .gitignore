@@ -8,8 +8,6 @@
 /gpx/
 /js copie/
 /tilesCustom/
-/API/.github/
-/API/.git/
 
 # Fichiers de configuration sensibles
 API/config.php
