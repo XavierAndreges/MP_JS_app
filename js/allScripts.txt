@@ -1,0 +1,504 @@
+NodeWalk & NodeCar pour Slackline
+
+
+//************** fichier new Table avis **************
+
+getHtmlAvis.php
+
+mpIdentifier.php -> tableAvisArray / $prod
+var.js -> tableAvisArray / isProdWeb
+
+avis.js -> getCellForAvis"Table" / avisResponse / avisWords
+
+localisable.js -> formLabel
+localisable.php -> $formLabel
+
+insertAvis.php
+
+
+
+//**************************************
+
+        
+POIDS :
+
+Assets : 3.3
+Tiles : 15.1
+tilesTraces : 7.2  
+
+S/total : 26
+
+js : 3.2   
+css: 0.2
+html: 0.2
+Divers : 1.0
+
+S/total : 30.6
+
+pictures : 16
+
+Total : 46.6
+
+
+//************** POIDS new 1  **************
+
+Assets : 3.6
+TilesCustom : 15.4
+tilesTraces : 8.3
+
+S/total : 27.3
+
+js : 5.1
+css: 0.3
+Divers : 1.0
+
+S/total : 33,7
+
+pictures : 15.1
+
+Total : 48.8
+
+//************** POIDS new 2  **************
+
+Assets : 3.6
+TilesCustom : 15.4
+tilesTraces : 8.3
+
+S/total : 25.7
+
+js : 5.4
+css: 0.35
+Divers : 1.0
+
+S/total : 34,05
+
+pictures : 17,4
+
+Total : 51,45
+
+//************** POIDS new 3  **************
+
+Assets : 3.9
+TilesCustom : 15.4
+tilesTraces : 3
+
+S/total : 27.6
+
+js : 5.8
+css: 0.35
+Divers : 1.0
+
+S/total : 34,75
+
+pictures : 21.1
+
+Total : 50.45
+        
+//******************************************
+
+
+Spatialite for Carry
+
+
+NEW ARTICLES
+
+Lac de Bimont
+Salins de giraud
+        
+        
+GENERAL :
+
+voir centrage de la carte après rotation
+
+Pb Circuits quand apparaît après sélection prev next
+
+bub cell "A faire" après launchResize / + city apparait ou non selon Category
+
+Gérer doublon
+
+Mettre à jour Carto Calanque (ref sentier morgiou)
+
+Titre pop up download -> manque size
+Problème sur le sauze
+
+Classement depuis getUpdate sur item dupliqué
+Affiner ordre & classement getUpdate
+
+
+mettre bonne url sur checkuUpdate & getHomeTest
+remettre ordre aléatoire sur listItems
+Vérifier concordance local/server -> fichiers pictures + gpx + JSON...
+
+repositionner pop up download apres rotate
+
+showMap('geoloc') -> pas de recherche sur la geoloc mais plutôt sur un indice
+
+Mettre pop up link sur lien Leaflet mention
+
+Mettre un article de chaque activité dans les 10 premiers si noIdea
+Solutions pour Port Miou - time research
+
+Menu à ouvrir avec un slide
+
+EN
+
+gestion label j'ai envie de quoi
+
+ANDROID
+
+Bouton retour quand diapo full size
+
+pop up sur massif sans fond
+
+IPAD
+
+privilégier photo du serveur
+
+IOS
+
+Revoir loader sur google map
+
+Titre trop long sur popup combien de temps
+
+Loader sur velo
+Geoloc pas précise au lancement
+Elever prev next btn si listItem <= 1
+
+Revoir temps prévu pour à chaque item
+
+St Pilon - grotte aux oeufs (revoir altitude max)
+ANthenors , trompines - voir photo
+
+Modifier code couleur pour massif pop up
+Revoir massif -> Villes concernées retirées car Nom trop long massif
+
+Mettre icon pour btn double list Practical
+
+
+HomeBgImage vide après retour liste nulle (non reproduit)
+
+//*******************
+
+TODELETE
+leftHomeOptionBlockMobile
+leftHomeOptionBlock
+
+
+MENU :
+
+GOOGLE MAP : 
+
+LEAFLET :
+Gestion bouton filtre item
+
+SPATIALITE :
+Vérifier Port Miou
+
+ASSETS
+
+
+
+
+<div id="diapoCategoryContainer">
+
+<a href="" id="diapoCategoryArrowLeft"><img src="Assets/arrow_left.png" /></a>
+
+<div class="swiper-container" id="diapoCategory">
+
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
+<div onclick="javascript:setHomePicturesSlider(0)" class="diapoCategoryBtn">
+<div class="cercleSousType"><img src="Assets/pastilles/noir/Home.png" /></div>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div onclick="javascript:setHomePicturesSlider('Circuits')" class="diapoCategoryBtn">
+<div class="cercleSousType"><img src="Assets/pastilles/noir/Circuits.png" /></div>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div onclick="javascript:setHomePicturesSlider('Monuments')" class="diapoCategoryBtn">
+<div class="cercleSousType"><img src="Assets/pastilles/noir/Monuments.png" /></div>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div onclick="javascript:setHomePicturesSlider('ExpositionsMusees')" class="diapoCategoryBtn">
+<div class="cercleSousType"><img src="Assets/pastilles/noir/ExpositionsMusees.png" /></div>                             </div>
+</div>
+
+<div class="swiper-slide">
+<div onclick="javascript:setHomePicturesSlider('Shopping')" class="diapoCategoryBtn">
+<div class="cercleSousType"><img src="Assets/pastilles/noir/Shopping.png" /></div>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div onclick="javascript:setHomePicturesSlider('Restos')" class="diapoCategoryBtn">
+<div class="cercleSousType"><img src="Assets/pastilles/noir/Restos.png" /></div>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div onclick="javascript:setHomePicturesSlider('Dormir')" class="diapoCategoryBtn">
+<div class="cercleSousType"><img src="Assets/pastilles/noir/Dormir.png" /></div>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div onclick="javascript:setHomePicturesSlider('Loisirs')" class="diapoCategoryBtn">
+<div class="cercleSousType"><img src="Assets/pastilles/noir/Loisirs.png" /></div>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div onclick="javascript:setHomePicturesSlider('SitesNaturels')" class="diapoCategoryBtn">
+<div class="cercleSousType"><img src="Assets/pastilles/noir/SitesNaturels.png" /></div>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div onclick="javascript:setHomePicturesSlider('Randonnee')" class="diapoCategoryBtn">
+<div class="cercleSousType"><img src="Assets/pastilles/noir/Randonnee.png" /></div>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div onclick="javascript:setHomePicturesSlider('SitesEscalade')" class="diapoCategoryBtn">
+<div class="cercleSousType"><img src="Assets/pastilles/noir/SitesEscalade.png" /></div>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div onclick="javascript:setHomePicturesSlider('Canyons')" class="diapoCategoryBtn">
+<div class="cercleSousType"><img src="Assets/pastilles/noir/Canyons.png" /></div>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div onclick="javascript:setHomePicturesSlider('PlageBaignadePiscine')" class="diapoCategoryBtn">
+<div class="cercleSousType"><img src="Assets/pastilles/noir/PlageBaignadePiscine.png" /></div>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div onclick="javascript:setHomePicturesSlider('Petanque')" class="diapoCategoryBtn">
+<div class="cercleSousType"><img src="Assets/pastilles/noir/Petanque.png" /></div>
+</div>
+</div>
+
+
+</div>
+
+</div>
+
+<a href="" id="diapoCategoryArrowRight"><img src="Assets/arrow_right.png" /></a>
+
+</div>
+
+
+
+[{"title_fr" : "",}];
+
+
+[{"type" : "SitesNaturels_MiseEau",
+"status" : "associatedMapItems",
+"latitude" : 43.334058,
+"longitude" : 5.177151
+}]
+
+
+
+
+,
+
+
+
+[{"type" : "SitesNaturels_Plongee",
+"status" : "associatedMapItems",
+"latitude" : 43.267783,
+"longitude" : 5.292475
+},
+{"type" : "PlageBaignadePiscine_Plage",
+"status" : "associatedMapItems",
+"latitude" : 43.284264,
+"longitude" : 5.315662
+},
+{"type" : "Sortir_Cafe",
+"status" : "associatedMapItems",
+"latitude" : 43.279026,
+"longitude" : 5.304122
+}]
+
+
+
+,
+
+
+
+
+[{"idRepName" : "royaumePoterie1",
+"city" : "St Cannat",
+"latitude" : 43.583787,
+"longitude" : 5.374181,
+"latitudeRouting" : 43.583287,
+"longitudeRouting" : 5.374259,
+"mainImage" : "Image3.jpg"},
+{"idRepName" : "royaumePoterie2",
+"city" : "Le Rove",
+"latitude" : 43.368089,
+"longitude" : 5.252244,
+"latitudeRouting" : 43.368323,
+"longitudeRouting" : 5.252208,
+"mainImage" : "Image2.jpg"},
+{"idRepName" : "royaumePoterie3",
+"city" : "La Ciotat",
+"latitude" : 43.192409,
+"longitude" : 5.605407,
+"latitudeRouting" : 43.192033,
+"longitudeRouting" : 5.605746,
+"mainImage" : "Image0.jpg"},
+{"idRepName" : "royaumePoterie4",
+"city" : "Lançon-Provence",
+"latitude" : 43.593756,
+"longitude" : 5.106276,
+"latitudeRouting" : 43.192033,
+"longitudeRouting" : 5.605746,
+"mainImage" : "Image9.jpg"},
+{"idRepName" : "royaumePoterie5",
+"city" : "Roquebrune-sur-Argens",
+"latitude" : 43.462602,
+"longitude" : 6.643066,
+"latitudeRouting" : 43.463228,
+"longitudeRouting" : 6.642481,
+"mainImage" : "Image6.jpg"}]
+
+
+
+[{"idRepName" : "royaumePoterie1",
+"city" : "St Cannat",
+"latitude" : 43.583787,
+"longitude" : 5.374181,
+"latitudeRouting" : 43.583287,
+"longitudeRouting" : 5.374259,
+"smallNodeWalk" : "-1",
+"smallNodeCar" : "-1",
+"fullNodeWalk" : "-1",
+"fullNodeCar" : "-1",
+"mainImage" : "Image3.jpg",
+"infos_fr" : "<strong>Adresse</strong> <br> 5805-5829 Route d'Avignon <br>13540 Aix-en-Provence<br>A proximité de St Cannat et du Chemin de lignane  <br><br> <strong>Ouverture</strong> <br> Tous les jours de 9h à 20h <br><br>  <strong>Tarifs</strong> <br> De 10€ à 300€ <br><br> <strong>Contact</strong><br> <a href=\"0616932583\" style=\"font-weight:normal;\">06 16 93 25 83</a>",
+"infos_en" : "<strong>Address</strong> <br> 5805-5829 Route d'Avignon <br>13540 Aix-en-Provence<br>Close to St Cannat and the Chemin de lignane  <br><br> <strong>Opening times</strong> <br> Everyday from 9am to 8pm <br><br>  <strong>Prices</strong> <br> From 10€ to 300€ <br><br> <strong>Contact</strong> <br> <a href=\"0616932583\" style=\"font-weight:normal;\">06 16 93 25 83</a>"},
+{"idRepName" : "royaumePoterie2",
+"city" : "Le Rove",
+"latitude" : 43.368089,
+"longitude" : 5.252244,
+"latitudeRouting" : 43.368323,
+"longitudeRouting" : 5.252208,
+"smallNodeWalk" : "325",
+"smallNodeCar" : "322",
+"fullNodeWalk" : "14081",
+"fullNodeCar" : "14105",
+"mainImage" : "Image2.jpg",
+"infos_fr" : "<strong>Adresse</strong> <br> 58B Route Nord 568 <br> 13740 Le Rove<br>A proximité du centre commercial Casino  <br><br> <strong>Ouverture</strong> <br> Tous les jours de 9h à 20h <br><br>  <strong>Tarifs</strong> <br> De 10€ à 300€ <br><br> <strong>Contact</strong><br> <a href=\"0652013118\" style=\"font-weight:normal;\">06 52 01 31 18</a>",
+"infos_en" : "<strong>Address</strong> <br>58B Route Nord 568 <br> 13740 Le Rove<br>Close to commercial centre Casino<br><br> <strong>Opening times</strong> <br> Everyday from 9am to 8pm <br><br>  <strong>Prices</strong> <br> From 10€ to 300€ <br><br> <strong>Contact</strong> <br> <a href=\"0652013118\" style=\"font-weight:normal;\">06 52 01 31 18</a>"},
+{"idRepName" : "royaumePoterie3",
+"city" : "La Ciotat",
+"latitude" : 43.192409,
+"longitude" : 5.605407,
+"latitudeRouting" : 43.192033,
+"longitudeRouting" : 5.605746,
+"smallNodeWalk" : "-1",
+"smallNodeCar" : "-1",
+"fullNodeWalk" : "53809",
+"fullNodeCar" : "53257",
+"mainImage" : "Image0.jpg",
+"infos_fr" : "<strong>Adresse</strong> <br> 254 Chemin des Arbouses <br> 13600 La Ciotat<br>A proximité du rond point de la locomotive <br><br> <strong>Ouverture</strong> <br> Tous les jours de 9h à 20h <br><br>  <strong>Tarifs</strong> <br> De 10€ à 300€ <br><br> <strong>Contact</strong><br> <a href=\"0610039556\" style=\"font-weight:normal;\">06 10 03 95 56</a>",
+"infos_en" : "<strong>Address</strong><br> 254 Chemin des Arbouses <br> 13600 La Ciotat <br><br><strong>Opening times</strong> <br> Everyday from 9am to 8pm <br><br>  <strong>Prices</strong> <br> From 10€ to 300€ <br><br> <strong>Contact</strong> <a href=\"0610039556\" style=\"font-weight:normal;\">06 10 03 95 56</a>"},
+{"idRepName" : "royaumePoterie4",
+"city" : "Lançon-Provence",
+"latitude" : 43.593756,
+"longitude" : 5.106276,
+"latitudeRouting" : 43.192033,
+"longitudeRouting" : 5.605746,
+"smallNodeWalk" : "-1",
+"smallNodeCar" : "-1",
+"fullNodeWalk" : "-1",
+"fullNodeCar" : "-1",
+"mainImage" : "Image9.jpg",
+"infos_fr" : "<strong>Adresse</strong> <br> Chemin de Grans <br> 13680 Lançon-Provence<br><br> <strong>Ouverture</strong> <br> Tous les jours de 9h à 20h <br><br>  <strong>Tarifs</strong> <br> De 10€ à 300€ <br><br> <strong>Contact</strong><br> <a href=\"0621135383\" style=\"font-weight:normal;\">06 21 13 53 83</a>",
+"infos_en" : "<strong>Address</strong><br>Chemin de Grans <br> 13680 Lançon-Provence<br><br><strong>Opening times</strong> <br> Everyday from 9am to 8pm <br><br>  <strong>Prices</strong> <br> From 10€ to 300€ <br><br> <strong>Contact</strong> <a href=\"0621135383\" style=\"font-weight:normal;\">06 21 13 53 83</a>"},
+{"idRepName" : "royaumePoterie5",
+"city" : "Roquebrune-sur-Argens",
+"latitude" : 43.462602,
+"longitude" : 6.643066,
+"latitudeRouting" : 43.463228,
+"longitudeRouting" : 6.642481,
+"smallNodeWalk" : "-1",
+"smallNodeCar" : "-1",
+"fullNodeWalk" : "-1",
+"fullNodeCar" : "-1",
+"mainImage" : "Image6.jpg",
+"infos_fr" : "<strong>Adresse</strong> <br> RD7 Pont du Prieur <br> 83520 Roquebrune-sur-Argens <br><br> <strong>Ouverture</strong> <br> Tous les jours de 9h à 20h <br><br>  <strong>Tarifs</strong> <br> De 10€ à 300€ <br><br> <strong>Contact</strong><br> <a href=\"0685304342\" style=\"font-weight:normal;\">06 85 30 43 42</a>",
+"infos_en" : "<strong>Address</strong><br>RD7 Pont du Prieur <br> 83520 Roquebrune-sur-Argens <br><br><strong>Opening times</strong> <br> Everyday from 9am to 8pm <br><br>  <strong>Prices</strong> <br> From 10€ to 300€ <br><br> <strong>Contact</strong> <a href=\"0685304342\" style=\"font-weight:normal;\">06 85 30 43 42</a>"}]
+
+
+/************* poterie Meyrargues ********************
+
+<strong>Adresse</strong> <br> Route Nationale 96 <br> Quartier La Grange <br> 13650 Meyrargues <br><br> <strong>Ouverture</strong> <br> Tous les jours de 9h à 20h <br><br>  <strong>Tarifs</strong> <br> De 10€ à 300€ <br><br> <strong>Contact</strong><br> <a href="0669456541" style="font-weight:normal;">06 69 45 65 41</a>
+
+<strong>Address</strong> <br> Route Nationale 96 <br> Quartier La Grange <br> 13650 Meyrargues <br><br> <strong>Opening times</strong> <br> Everyday from 9am to 8pm <br><br>  <strong>Prices</strong> <br> From 10€ to 300€ <br><br> <strong>Contact</strong> <br> <a href="0669456541" style="font-weight:normal;">06 69 45 65 41</a>
+
+/************* poterie St Cannat ********************
+
+<strong>Adresse</strong> <br> 5805-5829 Route d'Avignon <br>13540 Aix-en-Provence<br>A proximité de St Cannat et du Chemin de lignane  <br><br> <strong>Ouverture</strong> <br> Tous les jours de 9h à 20h <br><br>  <strong>Tarifs</strong> <br> De 10€ à 300€ <br><br> <strong>Contact</strong><br> <a href="0616932583" style="font-weight:normal;">06 16 93 25 83</a>
+
+<strong>Address</strong> <br> 5805-5829 Route d'Avignon <br>13540 Aix-en-Provence<br>Close to St Cannat and the Chemin de lignane  <br><br> <strong>Opening times</strong> <br> Everyday from 9am to 8pm <br><br>  <strong>Prices</strong> <br> From 10€ to 300€ <br><br> <strong>Contact</strong> <br> <a href="0616932583" style="font-weight:normal;">06 16 93 25 83</a>
+
+/************* poterie Le Rove ********************
+
+<strong>Adresse</strong> <br> 58B Route Nord 568 <br> 13740 Le Rove<br>A proximité du centre commercial Casino  <br><br> <strong>Ouverture</strong> <br> Tous les jours de 9h à 20h <br><br>  <strong>Tarifs</strong> <br> De 10€ à 300€ <br><br> <strong>Contact</strong><br> <a href="0652013118" style="font-weight:normal;">06 52 01 31 18</a>
+
+<strong>Address</strong> <br>58B Route Nord 568 <br> 13740 Le Rove<br>Close to commercial centre Casino<br><br> <strong>Opening times</strong> <br> Everyday from 9am to 8pm <br><br>  <strong>Prices</strong> <br> From 10€ to 300€ <br><br> <strong>Contact</strong> <br> <a href="0652013118" style="font-weight:normal;">06 52 01 31 18</a>
+
+/************* poterie La Ciotat ********************
+
+<strong>Adresse</strong> <br> 254 Chemin des Arbouses <br> 13600 La Ciotat<br>A proximité du rond point de la locomotive <br><br> <strong>Ouverture</strong> <br> Tous les jours de 9h à 20h <br><br>  <strong>Tarifs</strong> <br> De 10€ à 300€ <br><br> <strong>Contact</strong><br> <a href="0610039556" style="font-weight:normal;">06 10 03 95 56</a>
+
+<strong>Address</strong><br> 254 Chemin des Arbouses <br> 13600 La Ciotat <br><br><strong>Opening times</strong> <br> Everyday from 9am to 8pm <br><br>  <strong>Prices</strong> <br> From 10€ to 300€ <br><br> <strong>Contact</strong> <a href="0610039556" style="font-weight:normal;">06 10 03 95 56</a>
+
+/************* poterie Lançon-Provence ********************
+
+<strong>Adresse</strong> <br> Chemin de Grans <br> 13680 Lançon-Provence<br><br> <strong>Ouverture</strong> <br> Tous les jours de 9h à 20h <br><br>  <strong>Tarifs</strong> <br> De 10€ à 300€ <br><br> <strong>Contact</strong><br> <a href="0621135383" style="font-weight:normal;">06 21 13 53 83</a>
+
+<strong>Address</strong><br>Chemin de Grans <br> 13680 Lançon-Provence<br><br><strong>Opening times</strong> <br> Everyday from 9am to 8pm <br><br>  <strong>Prices</strong> <br> From 10€ to 300€ <br><br> <strong>Contact</strong> <a href="0621135383" style="font-weight:normal;">06 21 13 53 83</a>
+
+/************* poterie Roquebrune-sur-Argens ********************
+
+<strong>Adresse</strong> <br> RD7 Pont du Prieur <br> 83520 Roquebrune-sur-Argens <br><br> <strong>Ouverture</strong> <br> Tous les jours de 9h à 20h <br><br>  <strong>Tarifs</strong> <br> De 10€ à 300€ <br><br> <strong>Contact</strong><br> <a href="0685304342" style="font-weight:normal;">06 85 30 43 42</a>
+
+<strong>Address</strong><br>RD7 Pont du Prieur <br> 83520 Roquebrune-sur-Argens <br><br><strong>Opening times</strong> <br> Everyday from 9am to 8pm <br><br>  <strong>Prices</strong> <br> From 10€ to 300€ <br><br> <strong>Contact</strong> <a href="0685304342" style="font-weight:normal;">06 85 30 43 42</a>
+
+
+
+
+Depuis Aix-en-Provence gare routière, bus N°120 direction Jouques arrêt Les 3 gares, puis marche 3mn.
+
+From Aix-en-Provence bus station, bus N°120 direction Jouques stop Les 3 gares, then walk 3mn.
+
+
+
+
+INSERT INTO `Shopping_new` (`idRepName`, `actif`, `table`, `title_fr`, `title_en`, `region`, `department`, `city`, `type`, `soustype`, `macaron`, `promo_fr`, `promo_en`, `mountains`, `longitude`, `latitude`, `longitudeRouting`, `latitudeRouting`, `smallNodeWalk`, `smallNodeCar`, `fullNodeWalk`, `fullNodeCar`, `costWalk`, `costCar`, `closeCity`, `pied`, `velo`, `moto`, `auto`, `bus`, `resume_fr`, `link`, `transport_fr`, `transport_en`, `transportBonus`, `infos_fr`, `infos_en`, `mail`, `mainImage`, `text_fr`, `text_en`, `text_es`, `text_ger`, `duplicateItems`) VALUES
+('royaumePoterie', 1, 'Shopping', 'Le royaume de la poterie (-30% ou 1 acheté / 1 offert)', 'The kingdom of pottery (-30% or bye one / get one)', NULL, 13, 'Meyrargues', 'Artisanat', NULL, 'Promo', NULL, NULL, NULL, 5.53759, 43.6429, 5.53744, 43.6427, -1, -1, -1, -1, NULL, NULL, 'Marseille, Aix en Provence, Arles, Jouques', '577, 215, 981, 104', '158, 59, 278, 31', '32, 17, 67, 11', '37, 22, 72, 16', '75, 45, 135, 27', NULL, NULL, '', '', NULL, '<strong>Adresse</strong> <br> Route Nationale 96 <br> Quartier La Grange <br> 13650 Meyrargues <br><br> <strong>Ouverture</strong> <br> Tous les jours de 9h à 20h <br><br>  <strong>Tarifs</strong> <br> De 10€ à 300€ <br><br> <strong>Contact</strong><br> <a href="0669456541" style="font-weight:normal;">06 69 45 65 41</a>', '<strong>Address</strong> <br> Route Nationale 96 <br> Quartier La Grange <br> 13650 Meyrargues <br><br> <strong>Opening times</strong> <br> Everyday from 9am to 8pm <br><br>  <strong>Prices</strong> <br> From 10€ to 300€ <br><br> <strong>Contact</strong> <br> <a href="0669456541" style="font-weight:normal;">06 69 45 65 41</a>', NULL, 'Image.jpg', 'Dans votre visite de l’arrière-pays aixois, sur la route de Peyrolles et de Jouques, vous y verrez un marchant de poteries qui mérite une petite visite pour les produits et prix qu’il propose. <br><br> Pots classiques et économiques ou véritables objets de décoration, le choix est vaste. Déambulez parmi les allées et laissez vous séduire par la poterie artisanale aux couleurs provençales, les gros volumes aux tons plus neutres ou les séries en Terracotta pour des surfaces brutes. Ces dernières, importées du Vietnam, résiste à -25°, ce qui suffira bien amplement à nos hivers rigoureux… <br><br> Finalement, si vous avez la chance d’avoir chez vous de grandes surfaces, vous trouverez un éventail de mobiliers et statues qui peuvent agrémenter vos extérieurs et leur donner un caractère unique. Laissez donc libre court à votre imagination.', 'In your visit to the hinterland of Aix-en-Provence, on the road to Peyrolles and Jouques, you''ll see a pottery seller that worth a visit for the products and prices it offers.  <br> <br>  Conventional and economic pots or real decorative objects, the choice is vast. Meander through the aisles and let yourself be seduced by the artisanal pottery with colors of Provence, the large volumes with more neutral tones or the Terracotta series for its rough surfaces. These last ones, imported from Vietnam, are resistant to -25 °, which is quite enough for our hard winters ...  <br> <br>  Finally, if you are lucky to have large areas in your house, you will find a range of furniture and statues which can decorate your exterior and give them a unique character. So give free rein to your imagination.', NULL, NULL, '[{"idRepName" : "royaumePoterie1", "city" : "St Cannat", "latitude" : 43.583787, "longitude" : 5.374181, "latitudeRouting" : 43.583287, "longitudeRouting" : 5.374259, "mainImage" : "Image3.jpg", "infos_fr" : "<strong>Adresse</strong> <br> 5805-5829 Route d''Avignon <br>13540 Aix-en-Provence<br>A proximité de St Cannat et du Chemin de lignane  <br><br> <strong>Ouverture</strong> <br> Tous les jours de 9h à 20h <br><br>  <strong>Tarifs</strong> <br> De 10€ à 300€ <br><br> <strong>Contact</strong><br> <a href=\\"0616932583\\" style=\\"font-weight:normal;\\">06 16 93 25 83</a>", "infos_en" : "<strong>Address</strong> <br> 5805-5829 Route d''Avignon <br>13540 Aix-en-Provence<br>Close to St Cannat and the Chemin de lignane  <br><br> <strong>Opening times</strong> <br> Everyday from 9am to 8pm <br><br>  <strong>Prices</strong> <br> From 10€ to 300€ <br><br> <strong>Contact</strong> <br> <a href=\\"0616932583\\" style=\\"font-weight:normal;\\">06 16 93 25 83</a>"}, {"idRepName" : "royaumePoterie2", "city" : "Le Rove", "latitude" : 43.368089, "longitude" : 5.252244, "latitudeRouting" : 43.368323, "longitudeRouting" : 5.252208, "mainImage" : "Image2.jpg", "infos_fr" : "<strong>Adresse</strong> <br> 58B Route Nord 568 <br> 13740 Le Rove<br>A proximité du centre commercial Casino  <br><br> <strong>Ouverture</strong> <br> Tous les jours de 9h à 20h <br><br>  <strong>Tarifs</strong> <br> De 10€ à 300€ <br><br> <strong>Contact</strong><br> <a href=\\"0652013118\\" style=\\"font-weight:normal;\\">06 52 01 31 18</a>", "infos_en" : "<strong>Address</strong> <br>58B Route Nord 568 <br> 13740 Le Rove<br>Close to commercial centre Casino<br><br> <strong>Opening times</strong> <br> Everyday from 9am to 8pm <br><br>  <strong>Prices</strong> <br> From 10€ to 300€ <br><br> <strong>Contact</strong> <br> <a href=\\"0652013118\\" style=\\"font-weight:normal;\\">06 52 01 31 18</a>"}, {"idRepName" : "royaumePoterie3", "city" : "La Ciotat", "latitude" : 43.192409, "longitude" : 5.605407, "latitudeRouting" : 43.192033, "longitudeRouting" : 5.605746, "mainImage" : "Image0.jpg", "infos_fr" : "<strong>Adresse</strong> <br> 254 Chemin des Arbouses <br> 13600 La Ciotat<br>A proximité du rond point de la locomotive <br><br> <strong>Ouverture</strong> <br> Tous les jours de 9h à 20h <br><br>  <strong>Tarifs</strong> <br> De 10€ à 300€ <br><br> <strong>Contact</strong><br> <a href=\\"0610039556\\" style=\\"font-weight:normal;\\">06 10 03 95 56</a>", "infos_en" : "<strong>Address</strong><br> 254 Chemin des Arbouses <br> 13600 La Ciotat <br><br><strong>Opening times</strong> <br> Everyday from 9am to 8pm <br><br>  <strong>Prices</strong> <br> From 10€ to 300€ <br><br> <strong>Contact</strong> <a href=\\"0610039556\\" style=\\"font-weight:normal;\\">06 10 03 95 56</a>"}, {"idRepName" : "royaumePoterie4", "city" : "Lançon-Provence", "latitude" : 43.593756, "longitude" : 5.106276, "latitudeRouting" : 43.192033, "longitudeRouting" : 5.605746, "mainImage" : "Image9.jpg", "infos_fr" : "<strong>Adresse</strong> <br> Chemin de Grans <br> 13680 Lançon-Provence<br><br> <strong>Ouverture</strong> <br> Tous les jours de 9h à 20h <br><br>  <strong>Tarifs</strong> <br> De 10€ à 300€ <br><br> <strong>Contact</strong><br> <a href=\\"0621135383\\" style=\\"font-weight:normal;\\">06 21 13 53 83</a>", "infos_en" : "<strong>Address</strong><br>Chemin de Grans <br> 13680 Lançon-Provence<br><br><strong>Opening times</strong> <br> Everyday from 9am to 8pm <br><br>  <strong>Prices</strong> <br> From 10€ to 300€ <br><br> <strong>Contact</strong> <a href=\\"0621135383\\" style=\\"font-weight:normal;\\">06 21 13 53 83</a>"}, {"idRepName" : "royaumePoterie5", "city" : "Roquebrune-sur-Argens", "latitude" : 43.462602, "longitude" : 6.643066, "latitudeRouting" : 43.463228, "longitudeRouting" : 6.642481, "mainImage" : "Image6.jpg", "infos_fr" : "<strong>Adresse</strong> <br> RD7 Pont du Prieur <br> 83520 Roquebrune-sur-Argens <br><br> <strong>Ouverture</strong> <br> Tous les jours de 9h à 20h <br><br>  <strong>Tarifs</strong> <br> De 10€ à 300€ <br><br> <strong>Contact</strong><br> <a href=\\"0685304342\\" style=\\"font-weight:normal;\\">06 85 30 43 42</a>", "infos_en" : "<strong>Address</strong><br>RD7 Pont du Prieur <br> 83520 Roquebrune-sur-Argens <br><br><strong>Opening times</strong> <br> Everyday from 9am to 8pm <br><br>  <strong>Prices</strong> <br> From 10€ to 300€ <br><br> <strong>Contact</strong> <a href=\\"0685304342\\" style=\\"font-weight:normal;\\">06 85 30 43 42</a>"}]');
+
+
+
+
+
+
+
+
+

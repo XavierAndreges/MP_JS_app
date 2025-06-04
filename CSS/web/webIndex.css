@@ -1,0 +1,1033 @@
+body {
+    background-color:#ffffff;
+    font-family: 'Arial', sans-serif;
+    font-size:15px;
+    text-align: center;
+}
+
+.macaron {
+    margin-top:0px;
+    margin-right:-5px;
+}
+
+
+a {
+    text-decoration:none;
+    color:#000000
+}
+
+#IconCorner {
+    display:inline-block;
+    position:relative;
+    margin:10px 0px 0px 20px;
+}
+
+#IconCorner:hover {
+    opacity:0.7;
+}
+
+
+#drapeau {
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+
+#drapeau img {
+    width:30px;
+    height:30px;
+}
+
+#drapeau:hover {
+    opacity:0.7;
+}
+
+
+#header {
+  width:100%;
+  height:35px;
+  background-color:#515e71;
+  margin-bottom:25px;
+  color:#ffffff;
+  text-align:center;
+  padding-top:15px;
+  font-weight:bold;
+  font-size:20px;
+  text-shadow: 1px 1px #000000;
+}
+
+
+#mainDiaporama {
+    width:100%;
+    height:557px;
+    text-align:center;
+    position:relative;
+    display: inline-block;
+}
+
+#imageDiaporama {
+   display:inline-block;
+   width:1060px;
+   height:500px;
+   /*background-image:url('../../pictures/Home/Home3.jpg');*/
+   background-size:100% auto;
+   background-position:center;
+   position:relative;
+}
+
+
+
+/*
+#titleDiaporama {
+    position:absolute;
+    display: block;
+    width:100%;
+    height:26px;
+    top:450px;
+    z-index:5006;
+    color: #fff;
+    padding-top: 24px;
+    font-size: 18px;
+    text-shadow: 1px 1px #000000;
+    text-align: right;
+}
+
+
+#trianglePlus {
+    position:absolute;
+    display: block;
+    top:450px;
+    left:3000px;
+    z-index:5007;
+}
+
+#trianglePlus img {
+    width:50px;
+    height:50px;
+}
+
+ */
+
+#bgImageTitle {
+    position:absolute;
+    display:inline-block;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    padding:7px 0 7px 0;
+    background-color:rgba(77,96,111,0.7);
+    z-index:5006;
+    text-align:left;
+}
+
+#bgImageTitle p {
+    margin-left:10px;
+    margin-right:20px;
+    font-family: 'Open Sans';
+    font-size:16px;
+    color:#fff;
+}
+
+
+#trianglePlus {
+    position:absolute;
+    display:inline-block;
+    background-color:0px;
+    bottom:-3px;
+    right:0px;
+    z-index:5006;
+}
+
+#trianglePlus img {
+    width:45px;
+    height:45px;
+}
+
+
+#diapoHome {
+    display:inline-block;
+    width:1060px;
+    height:55px;
+    background-color: #515e71;
+    position:relative;
+    margin-top: -2px;
+}
+
+.diapoHomeBtn {
+    display: inline-block;
+    text-align: center;
+    width: 25%;
+    margin: 0;
+    color:#9a9a9a;
+    font-weight: bold;
+    font-size: 2em;
+    float: left;
+}
+
+#diapoHomeBtn0 img {
+    width:35px;
+    height:35px;
+    padding-top: 8px;
+}
+
+#diapoHomeBtn1 img, #diapoHomeBtn2 img, #diapoHomeBtn3 img {
+    width:38px;
+    height:38px;
+    padding-top: 7px;
+}
+
+#diapoHomeBtn0 img:hover, #diapoHomeBtn1 img:hover, #diapoHomeBtn2 img:hover, #diapoHomeBtn3 img:hover {
+    opacity:0.5;
+}
+
+/****************** swiper home selection ***********************/
+
+#leftHomeSelectionBlock
+{
+    width:1060px;
+    height: 100px;
+    margin:40px 0px 10px 0;
+    padding:0px 0px 0 0;
+    line-height:150%;
+    z-index:1;
+    display:inline-block;
+    text-align:center;
+    position:relative;
+    font-size:1.2em;
+    overflow: hidden;
+    border: 1px dotted #a9a9a9;
+}
+
+
+.swiper-container_home {
+    height: auto;
+    width:100%;
+    display:inline-block;
+}
+
+
+.swiper-wrapper {
+    box-sizing: content-box;
+    display: flex;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition-property: transform;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.mainHomeTitle {
+    border-right: 1px dotted #a9a9a9;
+    display: inline-table;
+    height: 100px;
+    line-height: 120%;
+    margin: 0;
+    opacity: 1;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 50%;
+    z-index: 100;
+}
+
+.mainHomeTitle:last-child {
+    border-right: none;
+}
+
+
+.diapoCategoryArrowLeft {
+    display: none;
+    padding-right: 15px;
+    position: absolute;
+    top: 0;
+    width: 20px;
+    z-index: 5030;
+}
+
+
+.diapoCategoryArrowRight {
+    display: none;
+    padding-left: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    z-index: 2;
+}
+
+
+/****************************************************************/
+
+#separatorBtnHomeTop
+{
+    display:inline-block;
+    width:10px;
+    height:10px;
+}
+
+#mainContainerWeb{
+    display:inline-block;
+    text-align:center;
+    width:100%;
+    padding:0px 0px 0px 0px;
+    margin:40px 0px 0px 0px;
+}
+
+#topItems {
+    width:100%;
+    padding:0px;
+    margin:0px;
+}
+
+
+#avisBlock {
+    display:inline-block;
+    width:1060px;
+}
+
+
+/***********************  DOSSIER ************************/
+
+#dossiersHomePage {
+    display:inline-block;
+    width:1060px;
+}
+
+.linksDossiersHomePage {
+    display: inline-block;
+    width:400px;
+    height: 300px;
+    position: relative;
+    background-size: 100% 100%;
+    background-position:center center;
+    margin: 10px;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.linksDossiersHomePage:hover {
+    background-size: 110% 110%;
+}
+
+#VeloMPMDossiersHomePage {
+    background-image:url('../../pictures/Index/web/LocationVelo.jpg');
+}
+
+#ClassicsDossiersHomePage {
+    /*background-image:url('../../pictures/Index/web/Classics.jpg');*/
+    background-image:url('../../pictures/Monuments/hotelDieu/480/Image.jpg');
+}
+
+#FavoritesDossiersHomePage {
+    /*background-image:url('../../pictures/Index/sugiton.jpg');*/
+    background-image:url('../../pictures/Loisirs/pierreClarac/480/Image.jpg');
+    /*background-image:url('../../pictures/ExpositionsMusees/MOAA/480/Image.jpg');*/
+    
+}
+
+#BestViewsDossiersHomePage {
+    /*background-image:url('../../pictures/PlageBaignadePiscine/plageBestouan/800/Image6.jpg')*/
+    background-image:url('../../pictures/SitesNaturels/tableOrientationMeyrargues/800/Image1.jpg')
+}
+
+#ChangeWorldDossiersHomePage {
+    background-image:url('../../pictures/Index/web/ChangeWorld.jpg')
+}
+
+#SlacklineDossiersHomePage {
+    background-image:url('../../pictures/Index/web/Slackline.jpg')
+}
+
+
+#AgendaDossiersHomePage {
+    background-image:url('../../pictures/Index/web/Agenda.jpg');
+}
+
+#PlongeeDossiersHomePage {
+    background-image:url('../../pictures/diapoHomeArray2/plongeeLaRedonne.jpg');
+}
+
+#EscaladeSlackDossiersHomePage {
+    /*background-image:url('../../pictures/SitesEscalade/razoCallelongue/480/Image.jpg');*/
+    background-image:url('../../pictures/SitesNaturels/anseArnetteSlack/800/Image.jpg');
+}
+
+#BaignadeDossiersHomePage {
+    background-image:url('../../pictures/PlageBaignadePiscine/abricotierPlage/480/Image.jpg');
+}
+
+
+.titleDossierHomePage {
+    position: absolute;
+    z-index: 2;
+    bottom:0px;
+    left: 0px;
+    width: 100%;
+    color:#fff;
+    font-size: 18px;
+    padding: 10px 0 10px 0;
+    background-color:rgba(77,96,111,0.7);
+}
+
+
+.categoryHome {
+    display:inline-table;
+    width:500px;
+    height:310px;
+    margin-bottom:40px;
+    /*background-color:grey;*/
+}
+
+.marginRight {
+    display:inline-block;
+    margin-right:60px;
+}
+
+.categoryTitle {
+    display:inline-block;
+    width:480px;
+    height:auto;
+    padding:10px 10px 0px 10px;
+    color:#ffffff;
+    font-weight:bold;
+    font-size:1.1em;
+    margin-bottom:5px;
+    text-align:left;
+}
+
+.categoryTitleLink {
+    color:#fff;
+}
+
+.plus {
+    float:right;
+    color:#a6537c;
+    font-weight:normal;
+    margin-top:-28px;
+    padding-right:0px;
+    text-decoration:none;
+    font-size:2em;
+    font-weight:bold;
+}
+
+.plus:hover {
+    color:grey;
+}
+
+.categoryTitleLink:hover {
+    color:#a9a9a9;
+}
+
+
+.separatorCellBlockHome
+{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    float:left;
+    /*background-color:red;*/
+}
+
+
+.cellBlockHome {
+    display:inline-block;
+    width:240px;
+    height:270px;
+    background-position:center;
+    background-size:100% auto;
+    margin:0 0px 0 0;
+    text-decoration:none;
+    float:left;
+    text-align:left;
+    /*background-color:grey;*/
+}
+
+.visualCellHome {
+    display:inline-block;
+    width:240px;
+    height:190px;
+    background-size:auto 100%;
+    background-repeat:no-repeat;
+    background-position:center center;
+    position:relative;
+}
+
+.moreHomeHome {
+    display: none;
+    position: absolute;
+    width: 240px;
+    height:270px;
+    margin:0px;
+    padding:0px;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/***********************  HOME ************************/
+
+
+#homeColorsBlock, #screenShotsBlock, #screenShotsBlock2,
+#textDetailBlock, #demoBlock, #grayColorsBlock,
+#grayColorsBlock2, #grayColorsBlock3, #grayColorsBlock4,
+#grayColorsBlock5, #grayColorsBlock6, #linkCategoryBlock {
+    display:inline-block;
+    margin:0px 0px 10px 0px;
+    padding:0px 0px 0px 0px;
+    width:100%;
+}
+
+#pinkColorsBlock, #blueColorsBlock,
+#orangeColorsBlock, #greenColorsBlock {
+    display:inline-table;
+    width:288px;
+    height:120px;
+    padding:0px 0px 0px 0px;
+    margin:0px 5px;
+    border:#cccccc solid 1px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#grayColorsBlock div, #grayColorsBlock2 div,
+#grayColorsBlock3 div, #grayColorsBlock4 div,
+#grayColorsBlock5 div, #grayColorsBlock6 div
+{
+    display:inline-table;
+    width:290px;
+    height:30px;
+    margin:0px 5px;
+}
+
+#grayColorsBlock a, #grayColorsBlock2 a {
+    font-weight:bold;
+    text-transform:uppercase;
+    text-decoration:underline;
+    padding-top:8px;
+    display:inline-block;
+    
+}
+
+.grayLightBgColor a {
+    color:#ffffff;
+}
+
+.ultraLightBgColor a {
+    color:#767878;
+}
+
+.ultraLightBgColor {
+    background-color : #cccccc;
+}
+
+.pinkBgColor {
+    background-color:#a6537c;
+    /*background-color:#e52e88;*/
+}
+
+.blueBgColor {
+    background-color: #285090;
+}
+
+.greenBgColor {
+    background-color : #566531;
+}
+
+.orangeBgColor {
+    /*background-color : #876B54;*/
+    background-color : #aa6a44;
+}
+
+.grayLightBgColor {
+    background-color : #767878;
+}
+
+.grayBgColor {
+    background-color :	#2E2A2A
+}
+
+.pinkGradient {
+    background-image:url('../../Assets/background/pinkGradient.png');
+    background-size:100% 100%;
+}
+
+.blueGradient {
+    background-image:url('../../Assets/background/blueGradient.png');
+    background-size:100% 100%;
+}
+
+.greenGradient {
+    background-image:url('../../Assets/background/greenGradient.png');
+    background-size:100% 100%;
+}
+
+.orangeGradient {
+    background-image:url('../../Assets/background/orangeGradient.png');
+    background-size:100% 100%;
+}
+
+.pinkGradientOpacity60 {
+    background-image:url('../../Assets/background/pinkGradientOpacity60.png');
+    background-size:100% 100%;
+}
+
+.labelColorsBlock {
+    margin:25px auto 0px auto;
+    font-size:1.2em;
+    font-weight:bold;
+    color:#ffffff;
+}
+
+.screenShots {
+    display:inline-table;
+    width:288px;
+    height:449px;
+    padding:0px 0px 0px 0px;
+    margin:5px;
+    border:#767878 solid 1px;
+}
+
+.linkCategory {
+    display:inline-table;
+    width:288px;
+    height:216px;
+    padding:0px 0px 0px 0px;
+    margin:5px;
+    border:#767878 solid 1px;
+    background-size:100% 100%;
+}
+
+.linkCategory span {
+    display:inline-block;
+    visibility:hidden;
+    width:288px;
+    height:20px;
+    padding:6px 0px 0px 0px;
+    margin-top:190px;
+    color:#ffffff;
+    font-size:1em;
+    text-shadow: 1px 1px #000000;
+    font-family: 'Helvetica', sans-serif;
+    font-weight:bold;
+}
+
+
+#screenShots01 {
+    background-image:url('../../AssetsWeb/screenshot/Screen2_new.png');
+    background-size:100% 100%;
+}
+
+#screenShots02 {
+    background-image:url('../../AssetsWeb/screenshot/notreDame_en.png');
+    background-size:100% 100%;
+}
+
+#screenShots03 {
+    background-image:url('../../AssetsWeb/screenshot/VieuxPort_en.png');
+    background-size:100% 100%;
+}
+
+#screenShots04 {
+    background-image:url('../../AssetsWeb/screenshot/rando_fr.png');
+    background-size:100% 100%;
+}
+
+#screenShots1 {
+    background-image:url('../../AssetsWeb/screenshot/escalade_en.png');
+    background-size:100% 100%;
+}
+
+#screenShots2 {
+    background-image:url('../../AssetsWeb/screenshot/louSpigaou.png');
+    background-size:100% 100%;
+}
+
+#screenShots3 {
+    background-image:url('../../AssetsWeb/screenshot/screenClose.jpg');
+    background-size:100% 100%;
+}
+
+#screenShots4 {
+    background-image:url('../../AssetsWeb/screenshot/MushrumCave.png');
+    background-size:100% 100%;
+}
+
+#screenShots5 {
+    background-image:url('../../AssetsWeb/screenshot/Resto_en.png');
+    background-size:100% 100%;
+}
+
+#screenShots6 {
+    background-image:url('../../AssetsWeb/screenshot/screenVelo.jpg');
+    background-size:100% 100%;
+}
+
+#screenShots7 {
+    background-image:url('../../AssetsWeb/screenshot/screenMassif.jpg');
+    background-size:100% 100%;
+}
+
+#screenShots8 {
+    background-image:url('../../AssetsWeb/screenshot/screenInfos.jpg');
+    background-size:100% 100%;
+}
+
+.textDetail {
+    display:inline-table;
+    width:248px;
+    height:340px;
+    padding:30px 20px;
+    margin:0px 5px;
+    border:#cccccc solid 1px;
+    color:#ffffff;
+    font-weight:bold;
+    text-align:left;
+    line-height:120%;
+    font-size:1em;
+}
+
+.titleLabelTextDetail {
+    display:inline-block;
+    width:100%;
+    text-align:center;
+    font-size : 1.6em;
+    margin-bottom:30px;
+    text-shadow: 1px 1px #000000;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#openDemoBtn {
+    margin:5px;
+    display:inline-table;
+    width:310px;
+    height:23px;
+    background-image:url('../../Assets/bande_grise.png');
+    background-size: 100% 100%;
+    color:#ffffff;
+    padding-top:7px;
+    font-weight:bold;
+}
+
+.separated {
+    display:inline-block;
+    width:100%;
+    height:1px;
+    border-top:#ffffff dotted 1px;
+    margin:10px 0px;
+}
+
+.colorText {
+    color:#cccccc;
+}
+
+
+#bottomInfos {
+    position:relative;
+}
+
+
+
+@media only screen and (max-width: 1060px)
+{
+    #header {
+        margin-bottom:0px;
+    }
+    
+    #diapoHome {
+    width:100%;
+    margin-top: -4px;
+    }
+
+    
+    .categoryHome {
+        margin-left:20px;
+        margin-right:20px;
+    }
+    
+    .marginRight {
+        display:none;
+    }
+    
+    #imageDiaporama, #leftHomeSelectionBlock, #avisBlock,  #dossiersHomePage {
+        width:100%;
+    }
+    
+    #leftHomeSelectionBlock
+    {
+        border-top: 1px dotted #a9a9a9;
+        border-bottom: 1px dotted #a9a9a9;
+        border-left: none;
+        border-right: none;
+    }
+
+}
+
+
+@media only screen and (max-width: 946px)
+{
+    
+    
+    
+    .categoryHome {
+        margin-left:0px;
+        margin-right:0px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 768px)
+{
+    
+    #grayColorsBlock, #grayColorsBlock2,
+    #grayColorsBlock3, #grayColorsBlock4,
+    #grayColorsBlock5, #grayColorsBlock6 {
+        display:none;
+    }
+    
+    #screenShotsBlock div:last-child,
+    #screenShotsBlock2 div:last-child {
+        display:none;
+    }
+    
+    #separatorBtnHomeTop
+    {
+        display:inline-block;
+        width:100%;
+        height:10px;
+    }
+    
+    .categoryTitleLink:hover {
+    color:#fff;
+    }
+    
+    
+    #leftHomeSelectionBlock {
+        margin-top:40px;
+        margin-bottom:0px;
+    }
+}
+
+
+@media only screen and (max-width: 480px)
+{
+    #header {
+        font-size:0.9em;
+    }
+    
+    #sousHeader {
+        display:none;
+    }
+    
+    #mainDiaporama {
+        height:296px;
+    }
+    
+    #imageDiaporama {
+        height:240px;
+    }
+    
+    
+    
+    .categoryHome {
+        width:100%;
+        margin-bottom:0px;
+        /*background-color:grey;*/
+    }
+    
+    
+    #bgImageTitle p {
+    font-size:13px;
+    }
+    
+    
+
+
+    
+    .btnSousTypePopUp {
+        font-size: 16px;
+    }
+
+    
+    .categoryTitle {
+        display:inline-block;
+        width:98%;
+        height:auto;
+        padding:3% 0 1% 2%;
+        color:#ffffff;
+        font-weight:bold;
+        font-size:1.1em;
+        margin-bottom:15px;
+        text-align:left;
+    }
+    
+
+    .separatorCellBlockHome
+    {
+        width:0px;
+        height:0px;
+    }
+    
+    .cellBlockHome {
+        display:inline-block;
+        width:200px;
+        height:230px;
+        background-position:center;
+        background-size:100% auto;
+        margin:0 10px 20px 10px;
+        text-decoration:none;
+        float:left;
+        text-align:left;
+    }
+    
+    .visualCellHome {
+        display:inline-block;
+        width:200px;
+        height:150px;
+        background-size:auto 100%;
+        background-repeat:no-repeat;
+        background-position:center center;
+    }
+    
+    
+    .moreHomeHome{
+        display: none;
+        position: absolute;
+        width: 200px;
+        height:230px;
+        margin:0px;
+        padding:0px;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+}
+
+
+@media only screen and (max-width: 400px)
+{
+    #bgImageTitle p {
+    font-size:12px;
+    }
+
+
+.macaronHome0 {
+    background-repeat: no-repeat;
+    height: 65px;
+    overflow: visible;
+    position: absolute;
+    right: -7px;
+    top: -16px;
+    width: 65px;
+    z-index: 102;
+}
+    
+    
+    .cellBlockHome {
+        display:inline-block;
+        width:96%;
+        height:240px;
+        background-position:center;
+        background-size:100% auto;
+        margin:0 2% 30px 2%;
+        text-decoration:none;
+        float:left;
+        text-align:left;
+        background-color:#f5f5f5;
+    }
+    
+    .visualCellHome {
+        display:inline-block;
+        width:100%;
+        height:160px;
+        background-size:100% auto;
+        background-repeat:no-repeat;
+        background-position:center center;
+    }
+    
+    .moreHomeHome {
+        display: none;
+        position: absolute;
+        width: 96%;
+        height:240px;
+        margin:0px;
+        padding:0px;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    
+    .linksDossiersHomePage {
+        width:320px;
+        height: 240px;
+        margin: 10px 0 0 0;
+    }
+    
+/*
+@media only screen and (max-width: 400px)
+{
+
+    
+    .cellBlockHome {
+        display:inline-block;
+        width:98%;
+        height:250px;
+        padding-left:2%;
+        padding-bottom:10px;
+        background-position:center;
+        background-size:100% auto;
+        margin:0 0px 30px 0;
+        text-decoration:none;
+        float:left;
+        text-align:left;
+        background-color:#f5f5f5;
+    }
+    
+    .visualCellHome {
+        display:inline-block;
+        width:98%;
+        height:160px;
+        margin-top:10px;
+        background-size:100% auto;
+        background-repeat:no-repeat;
+        background-position:center center;
+    }
+    
+    
+    .moreHomeHome {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height:240px;
+        margin:0px;
+        padding:0px;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+*/
+
+
+
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0){
+    /* Safari only override */
+    ::i-block-chrome, .textDetail {
+        width:288px;
+    }
+    
+    ::i-block-chrome, #openDemoBtn {
+        padding-top:4px;
+    }
+    
+    ::i-block-chrome, #grayColorsBlock div, #grayColorsBlock2 div,
+    #grayColorsBlock3 div, #grayColorsBlock4 div
+    {
+        width:288px;
+    }
+
+    
+

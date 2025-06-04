@@ -1,0 +1,157 @@
+#bottomInfos {
+    display:inline-block;
+    bottom:0px;
+    left:0px;
+    background-color:#c6ccca;
+    background-color:#bac7da;
+    width:96%;
+    height:auto;
+    padding:10px 2% 0 2%;
+    margin-top:40px;
+    line-height:120%;
+    font-size:1em;
+    z-index: 5010;
+}
+
+
+#iconBottom {
+    display:inline-block;
+    position:relative;
+    float:left;
+    margin-right:40px;
+}
+
+#iconBottom img {
+    width:80px;
+    height:80px;
+}
+
+#textBottom {
+    width:40%;
+    padding:5px 0;
+    float:left;
+    margin-top:0px;
+    font-size:13px;
+    font-weight:bold;
+    text-align: justify;
+    margin-right: 40px;
+}
+
+.btnHomeTop {
+    display:inline-table;
+    float:left;
+    width:160px;
+    height:21px
+    height:auto;
+    padding:10px 10px;
+    text-align:center;
+    font-size:1em;
+    margin-left:30px;
+    margin-right:30px;
+    margin-top:20px;
+    color:#cccccc;
+    text-shadow: 1px 1px #000000;
+    
+}
+
+.btnHomeTop:hover{
+    color:#ffffff;
+}
+
+#logoStoreBlock {
+    float:left;
+    margin-top:20px;
+}
+
+#logoStoreBlock a {
+    display:inline-table;
+    margin-right:20px;
+}
+
+#infos {
+    float:right;
+    margin-top:20px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+
+#contact {
+    float:left;
+    margin-top:10px;
+    text-decoration:underline;
+}
+
+
+
+@media only screen and (max-width: 1060px)
+{
+}
+
+
+
+@media only screen and (max-width: 946px)
+{
+
+    #textBottom {
+        display:none;
+    }
+    
+    .btnHomeTop {
+        margin-top:10px;
+        margin-left:5%;
+        
+    }
+}
+
+
+@media only screen and (max-width: 480px)
+{
+    #bottomInfos {
+        font-size:1em;
+    }
+    
+    
+    #iconBottom img {
+        width:60px;
+        height:60px;
+    }
+    
+    .btnHomeTop {
+        margin-top:0px;
+        margin-left:5%;
+        margin-right:0;
+        margin-bottom:0;
+        width:160px;
+        height:10px
+        height:auto;
+        padding:5px 5px;
+        text-align:center;
+        font-size:1em;
+    }
+    
+    
+    #infos {
+        float:left;
+        margin-left:5%;
+        margin-top:0px;
+        font-size:0.7em;
+    }
+    
+    #copyright {
+        display:none;
+    }
+    
+    #contact {
+        margin-top:-10px;
+    }
+    
+    #iconBottom {
+        margin-left:5%;
+    }
+    
+    .btnHomeTop a {
+        margin-left:5%;
+    }
+    
+}

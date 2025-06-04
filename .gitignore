@@ -1,0 +1,15 @@
+# Fichiers système
+.DS_Store
+
+# Dossiers
+/_context/
+/Assets/
+/AssetsWeb/
+/gpx/
+/js copie/
+/tilesCustom/
+/API/.github/
+/API/.git/
+
+# Fichiers de configuration sensibles
+API/config.php

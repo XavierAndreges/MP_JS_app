@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+    <head>
+        <title>Parkings publics &amp; campings-car - Marseille Provence</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta charset="UTF-8" />
+        
+        <meta name="description" content="La liste des parkings publics et emplacements pour campings-car en Marseille Provence" />
+            
+        <meta name="Keywords" content="Marseille, Provence, Parkings publics, campings-car" />
+		
+        <link rel="stylesheet" href="CSS/jquery.mCustomScrollbar.css" />
+		
+        <link rel="stylesheet" href="CSS/styles.css" />
+        
+        <link rel="stylesheet" href="leaflet/leaflet.css" />
+        
+        <!--[if lte IE 8]><link rel="stylesheet" href="leaflet/leaflet.ie.css" /><![endif]-->
+        
+        <link rel="stylesheet" href="CSS/common.css" /><link rel="stylesheet" href="CSS/itemList.css" /><link rel="stylesheet" href="CSS/itemDetail.css" /><link rel="stylesheet" href="CSS/map.css" /><link rel="stylesheet" href="CSS/media_queries.css" /><link rel="stylesheet" href="CSS/gradient.css" />
+		
+		<link rel="alternate" hreflang="en" href="http://www.lajouquasse.fr/marseilleprovence/LocationVelo.html#en" />
+        <link rel="alternate" hreflang="de" href="http://www.lajouquasse.fr/marseilleprovence/LocationVelo.html#de" />
+        <link rel="alternate" hreflang="es" href="http://www.lajouquasse.fr/marseilleprovence/LocationVelo.html#es" />
+        
+        <script type="text/javascript" src="jquery/jquery.js"></script>
+
+        <script type="text/javascript" src="hammer/hammer_v1_0_5.js"></script>
+        <script type="text/javascript" src="hammer/jquery.hammer.js"></script>
+
+		<script src="jquery/jquery-ui-1.8.23.custom.min.js"></script>
+		<script src="jquery/jquery.mousewheel.min.js"></script>
+		<script src="jquery/jquery.mCustomScrollbar.js"></script>
+        
+        <script src="jquery/jquery-ui-1.10.1.custom.js"></script>
+        
+        <script type="text/javascript" src="leaflet/leaflet.js"></script>
+        <script type="text/javascript" src="js/SQLitePlugin.js"></script>
+        <!--<script type="text/javascript" src="js/cordova.js"></script><script type="text/javascript" src="js/GAPlugin.js"></script>-->
+        
+        <script type="text/javascript" src="js/myScript/var.js"></script><script type="text/javascript" src="js/myScript/model.js"></script><script type="text/javascript" src="js/myScript/popUp.js"></script><script type="text/javascript" src="js/myScript/mainScript.js"></script><script type="text/javascript" src="js/myScript/ImageManager.js"></script><script type="text/javascript" src="js/myScript/photoSwipe.js"></script><script type="text/javascript" src="js/myScript/localisable.js"></script><script type="text/javascript" src="js/myScript/language.js"></script><script type="text/javascript" src="js/myScript/distance.js"></script><script type="text/javascript" src="js/myScript/menu.js"></script><script type="text/javascript" src="js/myScript/transitions.js"></script><script type="text/javascript" src="js/myScript/trier.js"></script><script type="text/javascript" src="js/myScript/itemList.js"></script><script type="text/javascript" src="js/myScript/itemDetail.js"></script><script type="text/javascript" src="js/myScript/mapItems.js"></script><script type="text/javascript" src="js/myScript/mapIGN.js"></script><script type="text/javascript" src="js/myScript/SliderReduceScreen.js"></script><script type="text/javascript" src="js/myScript/SliderMediumScreen.js"></script><script type="text/javascript" src="js/myScript/sliderFullScreen.js"></script><script type="text/javascript" src="js/myScript/HtmlSliderReduceScreen.js"></script><script type="text/javascript" src="js/myScript/spatialite.js"></script><script type="text/javascript" src="js/myScript/dataMP13.js"></script><script src="js/myScript/randoGeoJSON.js"></script><script src="js/myScript/canyonsGeoJSON.js"></script><script src="js/myScript/escaladeGeoJSON.js"></script><script type="text/javascript" src="js/myScript/dataCDT.js"></script><script type="text/javascript" src="js/myScript/dataMPM.js"></script>
+        
+        <script type="text/javascript" src="js/utils.js"></script>
+		<script type="text/javascript" src="js/InfoBubble.js"></script>
+        
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+
+			if (isProdWeb)
+			{
+                _gaq.push(['_setAccount', 'UA-39619730-1']);
+                _gaq.push(['_trackPageview']);
+                
+                (function() {
+                 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                 })();
+			}
+        
+        var app = {
+            initialize: function() {
+                
+                console.log("initialize -> isMobileWeb : " + isMobileWeb);
+                
+                if (isMobileWeb)
+                this.deviceIsReady();
+                else
+                this.bindEvents();
+            },
+            
+            bindEvents: function() {
+                document.addEventListener('deviceready', this.deviceIsReady, false);
+            },
+            
+            deviceIsReady: function() {
+                onBodyLoad("Parkings");
+            },
+        };
+        
+        app.initialize();
+        
+        </script>
+
+
+    </head>
+    <body id="body">
+        
+        
+        <div id="splashScreen">
+        </div>
+        
+        <!------------------------------  Menu & Header ----------------------------------------->
+        
+        <div id="mobileTitle2" class="bgMobileTitle">
+            
+            <div id="mobileTitle2Left">
+                <a href="javascript:back();" id="backBtn">
+                </a>
+			</div>
+            
+			<h1 id="mobileTitle2Label" onclick="setScrollToTop(0);">
+                Parkings publics &amp; campings-car 
+			</h1>
+            
+			<div id="mobileTitle2Right">
+                
+                <a href="javascript:showMap()" id="showMapBtn">
+                    <img src="Assets/btn_localized.png" />
+                </a>
+                
+                <a href="javascript:showPopUpMapSettings()" id="showSettings">
+					<img src="Assets/settings.png" width="44" height="44"/>
+				</a>
+                
+                <a href="javascript:watchPosition(null);" id="showUserPosition">
+					<img src="Assets/IconUserPosition.png" width="44" height="44"/>
+				</a>
+                
+			</div>
+            
+        </div>
+		
+		<div id="mainMenu">
+			<div id="listMainMenu" class="corner">
+                <div id="tabBarMenu" style="width:100%; display:inline-block; margin:10px 0px">
+                    <a id="tabBarMenu0" class="tabBarMenuBtnDetail" href="javascript:setTabBarMenuBtnWithPosition(0)">
+                        Navigation
+                    </a>
+                    <a id="tabBarMenu1" class="tabBarMenuBtnDetail" href="javascript:setTabBarMenuBtnWithPosition(1)">
+                        Langues
+                    </a>
+                </div>
+                <div id="blockMenuDetail0" class="blockMenuDetail" style="display:none;">
+                    <a href="http://www.lajouquasse.fr/marseilleprovence/index.html" id="homeMenu" class="" >Mon Programme MP2013</a>
+                </div>
+			</div>
+            
+			<div id="btnMainMenu"></div>
+	    </div>
+        
+        
+        
+		<div id="bgImage"></div>
+		
+
+		<div id="mainContainer">
+        
+            <!------------------------------  Item list ----------------------------------------->
+            
+            <div id="itemListOptions" class="itemListOptionsTheme left">
+                
+                <a id="parkingsBtnMenu0" class="swithItemListBtn googleFontShadow1px" href="javascript:setItemListMenuBtnWithPosition(0)">
+                    Parkings publics
+                    
+                </a>
+                
+                <a id="parkingsBtnMenu1" class="swithItemListBtn googleFontShadow1px" href="javascript:setItemListMenuBtnWithPosition(1)">
+                    Aires campings-car
+                </a>
+                
+                <input id="searchForm" name="searchForm" type="text" size="32" value="Recherche..." class="searchFormHome corner" onKeyUp="javascript:setFilteredItemList()"/>
+                
+                <a id="closeBtnItemList" class="closeBtnItemList corner" href="javascript:showCloserItem(null);" style="float:left;">
+                    Le plus proche de moi
+                </a>
+                
+                <a id="trierBtnItemList" class="trierBtnItemList corner" href="javascript:showTrierOptions();" style="width:46%;">
+                    Trier
+                </a>
+                
+                <div id="trierOptions" style="width:100%; height:0px; background-color:#f1f1f1; margin-top:10px;"></div>
+                
+            </div>
+            
+            <div id="itemList" class="itemList clear">
+            </div>
+            
+            <div id="itemListBottomBtn">
+                <a href="javascript:setNextResultForItemList();" id="itemListBottomBtnNextResults">Afficher les résultats suivants</a>
+            </div>
+            
+            <!------------------------------  block map  ----------------------------------------->
+            
+            <div id="blockMap" class="corner">
+                
+                <div id="carousel-image-and-text" class="touchcarousel grey-blue">
+                    <ul id="menuTouchcarousel" class="touchcarousel-container">
+                    </ul>
+                </div>
+                
+                <div id="mapList" class="corner">
+                </div>
+                
+            </div>
+            
+            <!------------------------------  End container ----------------------------------------->   
+            
+        </div>
+        
+        <div id="bugScrollPositionFixed"></div>
+        
+        <div id="modalPopUp" class="bgWhiteToUltraLightGray">
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,3 @@
+#! /bin/bash
+
+cat common.css itemList.css itemDetail.css map.css media_queries.css gradient.css > ../mini/MyStyle_v1_1.css

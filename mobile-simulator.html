@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Simulator - MP2013</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .simulator-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .phone-frame {
+            width: 375px; /* iPhone width */
+            height: 812px; /* iPhone height */
+            background: #000;
+            border-radius: 40px;
+            padding: 10px;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+                
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .controls {
+            margin-left: 30px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .controls h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .device-selector {
+            margin-bottom: 20px;
+        }
+        
+        .device-selector select {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .orientation-btn {
+            padding: 10px 20px;
+            background: #007AFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        .orientation-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="simulator-container">
+        <div class="phone-frame">
+            <div class="phone-screen">
+                <iframe src="index.html" id="app-frame"></iframe>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <h2>Mobile Simulator Controls</h2>
+            
+            <div class="device-selector">
+                <label for="device-select">Select Device:</label>
+                <select id="device-select" onchange="changeDevice()">
+                    <option value="iphone12">iPhone 12/13</option>
+                    <option value="iphone8">iPhone 8</option>
+                    <option value="iphoneSE">iPhone SE</option>
+                </select>
+            </div>
+            
+            <button class="orientation-btn" onclick="toggleOrientation()">Toggle Orientation</button>
+            <button class="orientation-btn" onclick="reloadFrame()">Reload App</button>
+        </div>
+    </div>
+
+    <script>
+        const devices = {
+            iphone12: { width: 375, height: 812 },
+            iphone8: { width: 375, height: 667 },
+            iphoneSE: { width: 320, height: 568 }
+        };
+        
+        let currentDevice = 'iphone12';
+        let isPortrait = true;
+        
+        function changeDevice() {
+            currentDevice = document.getElementById('device-select').value;
+            updateFrameSize();
+        }
+        
+        function toggleOrientation() {
+            isPortrait = !isPortrait;
+            updateFrameSize();
+        }
+        
+        function updateFrameSize() {
+            const device = devices[currentDevice];
+            const phoneFrame = document.querySelector('.phone-frame');
+            
+            if (isPortrait) {
+                phoneFrame.style.width = device.width + 'px';
+                phoneFrame.style.height = device.height + 'px';
+            } else {
+                phoneFrame.style.width = device.height + 'px';
+                phoneFrame.style.height = device.width + 'px';
+            }
+        }
+        
+        function reloadFrame() {
+            document.getElementById('app-frame').src = 'index.html';
+        }
+    </script>
+</body>
+</html> 

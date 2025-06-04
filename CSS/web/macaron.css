@@ -1,0 +1,189 @@
+.macaron, .macaron2 {
+    width:65px;
+    height:65px;
+    float:right;
+    margin-top:-20px;
+    margin-right:-20px;
+}
+
+
+.macaronPin {
+    width:65px;
+    height:65px;
+    float:right;
+    margin-top:-20px;
+    margin-right:-30px;
+}
+
+.macaron0, .macaronSmall0, .macaronHome0 {
+    background-repeat: no-repeat;
+    height: 65px;
+    overflow: visible;
+    position: absolute;
+    right: -6px;
+    top: -13px;
+    width: 65px;
+    z-index: 102;
+}
+
+
+.macaron1, .macaronSmall1 {
+    background-repeat: no-repeat;
+    height: 64px;
+    overflow: visible;
+    position: absolute;
+    right: -6px;
+    top: 50px;
+    width: 64px;
+    z-index: 102;
+}
+
+.pastilleSousTypeMenu {
+    width:30px;
+    height:30px;
+    position:absolute;
+    top:18px;
+    left:-4px;
+    /*background-image:url('../../Assets/pastilles/Afond_blancNoir.png');*/
+    background-size:100% 100%;
+    z-index:100;
+    float: left;
+    margin-left: 7px;
+}
+
+.pastilleSousTypeMenu img {
+    width: 30px;
+    height: 30px;
+}
+
+
+.pastilleSousTypeHome {
+    width:30px;
+    height:30px;
+    position:absolute;
+    top:2px;
+    left:-4px;
+    background-image:url('../../Assets/pastilles/Afond_blancNoir.png');
+    background-size:100% 100%;
+    z-index:100;
+    float: left;
+    margin-left: 7px;
+}
+
+.swiper-slide{
+    position: relative;    
+}
+
+.pastilleSousTypeHome img {
+    width: 30px;
+    height: 30px;
+}
+
+
+.pastilleSousType {
+    width:37px;
+    height:37px;
+    position:relative;
+    top:5px;
+    left:5px;
+    background-image:url('../../Assets/pastilles/Afond_bleuNoir2.png');
+    background-size:100% 100%;
+    z-index:100;
+    float: left;
+    margin-left: 7px;
+}
+
+/*
+#linkCategoryBlock, .swiper-container, .swiper-wrapper {
+    overflow: visible;
+}
+*/
+.pastilleSousType2 {
+    width:37px;
+    height:37px;
+    position:relative;
+    top:5px;
+    left:5px;
+    background-image:url('../../Assets/pastilles/Afond_blancNoir.png');
+    background-size:100% 100%;
+    z-index:100;
+    float: left;
+    margin-left: 7px;
+}
+
+.pastilleCotationMediane{
+    top:7px;
+    left:9px;
+    position:relative;
+    font-size: 18px;
+    color:#515e71;
+}
+
+
+.Local_fr {
+    background-image:url('../../Assets/macaron/macaronLocal_fr.png');
+}
+
+.BioLocal_fr {
+    background-image:url('../../Assets/macaron/macaronBioLocal_fr.png');
+}
+
+.NoCarbone_fr {
+    background-image:url('../../Assets/macaron/macaronNoCarbone_fr.png');
+}
+
+.BioFrais_fr {
+    background-image:url('../../Assets/macaron/macaronBioFrais_fr.png');
+}
+
+.Maison_fr {
+    background-image:url('../../Assets/macaron/macaronMaison_fr.png');
+}
+
+.Local_en {
+    background-image:url('../../Assets/macaron/macaronLocal_en.png');
+}
+
+.BioLocal_en {
+    background-image:url('../../Assets/macaron/macaronBioLocal_en.png');
+}
+
+.NoCarbone_en {
+    background-image:url('../../Assets/macaron/macaronNoCarbone_en.png');
+}
+
+.BioFrais_en {
+    background-image:url('../../Assets/macaron/macaronBioFrais_en.png');
+}
+
+.Maison_en {
+    background-image:url('../../Assets/macaron/macaronMaison_en.png');
+}
+
+.Marche {
+    background-image:url('../../Assets/macaron/macaronMarche.png');
+}
+
+.Velo {
+    background-image:url('../../Assets/macaron/macaronVelo.png');
+}
+
+.TukTuk {
+    background-image:url('../../Assets/macaron/macaronTukTuk.png');
+}
+
+.Segway {
+    background-image:url('../../Assets/macaron/macaronSegway.png');
+}
+
+.Voiture {
+    background-image:url('../../Assets/macaron/macaronVoiture.png');
+}
+
+.Moto {
+    background-image:url('../Assets/macaron/macaronMoto.png');
+}
+
+
+
+

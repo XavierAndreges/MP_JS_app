@@ -1,0 +1,256 @@
+/******************************************************\
+*  Gamme slide 1 (home)
+\******************************************************/
+#carousel-image {height: 142px;}	
+#carousel-image .arrow-holder {height: 38px;}
+#carousel-image .item-block {width: 226px;display:block;}
+#carousel-image .touchcarousel-item {
+	margin: 0;padding: 0 2px 0 0;float: left;
+	background:url(../images/separateur_slide.png) no-repeat right 0 ;}
+
+.gamme_slide1 .touchcarousel.grey-blue .arrow-holder.left {background-color: #FFFFFF;left: 0;width: 22px;}
+.gamme_slide1 .touchcarousel.grey-blue .arrow-holder.right {right: 0;}
+.gamme_slide1 .touchcarousel.grey-blue .arrow-icon.left {
+	left: 0;background-image: url(../images/icon-slide_left.png);
+	background-repeat: no-repeat;width: 69px;height: 142px;
+	top:0;position: absolute;	cursor: pointer;}
+.gamme_slide1 .touchcarousel.grey-blue .arrow-icon.right {
+	right: 0;background-image: url(../images/icon-slide_right.png);
+	background-repeat: no-repeat;	width: 69px;height: 142px;
+	top:0;position: absolute;	cursor: pointer;	}
+.gamme_slide1 .touchcarousel .touchcarousel-container {position: relative;margin: 0; padding: 0;list-style: none; left: 0; background:url(../images/bg_carousel1.gif) repeat-x 0 0; overflow: hidden;}	
+.gamme_slide1 li.touchcarousel-item a.item-block img{padding: 4px 3px;}
+.gamme_slide1 li.touchcarousel-item a.item-block span{ color:#646464; font-size:20px;font-family: 'VWHeadlineBlkRegular';text-shadow: 0 2px 0 #FFFFFF;padding: 0 0 8px 8px; display:block;}
+
+/******************************************************\
+*  Gamme slide 2 (lagamme)
+\******************************************************/
+#carousel-type {height: 142px;}	
+#carousel-type .arrow-holder {height: 38px;}
+#carousel-type .item-block {width: 226px;display:block;}
+#carousel-type .touchcarousel-item {
+	margin: 0;padding: 0 2px 0 0;float: left;
+	background:url(../images/sparateur_caroussel2.png) no-repeat right 0 ;}
+
+#carousel-type .touchcarousel.grey-blue .arrow-holder.left {background-color: #FFFFFF;left: 0;width: 22px;}
+#carousel-type .touchcarousel.grey-blue .arrow-holder.right {right: 0;}
+
+#carousel-type.touchcarousel a.arrow-holder span.arrow-icon.left {
+	left: 0;background-image: url(../images/icon-slide_left.png);
+	background-repeat: no-repeat;width: 69px;height: 142px;
+	top:0;position: absolute;	cursor: pointer;}
+#carousel-type.touchcarousel a.arrow-holder span.arrow-icon.right {
+	right: 0;background-image: url(../images/icon-slide_right.png);
+	background-repeat: no-repeat;	width: 69px;height: 142px;
+	top:0;position: absolute;	cursor: pointer;	}
+
+#carousel-type.touchcarousel nav.touchcarousel-wrapper ul.touchcarousel-container{position: relative;margin: 0; padding: 0;list-style: none; left: 0; background:url(../images/bg_carousel2.gif) repeat-x 0 0; overflow: hidden;z-index: 0;}	
+#carousel-type li.touchcarousel-item a.item-block img{padding: 4px 3px;}
+#carousel-type li.touchcarousel-item a.item-block span{ color:#cdcdcd; font-size:20px;font-family: 'VWHeadlineBkRegular';padding: 0 0 7px 8px; display:block;}	
+	
+/******************************************************\
+*  slide (offres)
+\******************************************************/	
+#carousel-offres{height: 142px;position: relative;}	
+#carousel-offres .arrow-holder {height: 38px;}	
+#carousel-offres .item-block {width: 226px;display:block;}
+#carousel-offres.touchcarousel nav.touchcarousel-wrapper ul.touchcarousel-container li.touchcarousel-item a.item-block img{ display:block;}
+#carousel-offres .touchcarousel-item {
+	margin: 0;padding: 0 2px 0 0;float: left;cursor: pointer;
+	background:url(../images/separateur_slide.png) no-repeat right 0 ;}
+					
+.offres_slide .touchcarousel.grey-blue .arrow-holder.left {background-color: #FFFFFF;left: 0;width: 22px;}
+.offres_slide .touchcarousel.grey-blue .arrow-holder.right {right: 0;}
+.offres_slide .touchcarousel.grey-blue .arrow-icon.left {
+	left: 0;background-image: url(../images/icon-slide_left.png);
+	background-repeat: no-repeat;width: 69px;height: 142px;
+	top:0;position: absolute;	cursor: pointer;}
+.offres_slide .touchcarousel.grey-blue .arrow-icon.right {
+	right: 0;background-image: url(../images/icon-slide_right.png);
+	background-repeat: no-repeat;	width: 69px;height: 142px;
+	top:0;position: absolute;	cursor: pointer;	}
+.offres_slide .touchcarousel .touchcarousel-container {position: relative;margin: 0; padding: 0;list-style: none; left: 0; background:url(../images/bg_carousel1.gif) repeat-x 0 0; overflow: hidden;z-index: 0;}	
+.offres_slide li.touchcarousel-item a.item-block img{padding: 4px 3px;}
+.offres_slide li.touchcarousel-item a.item-block span{ color:#646464; font-size:20px;font-family: 'VWHeadlineBkRegular';text-shadow: 0 2px 0 #FFFFFF;padding: 0 0 10px 8px; display:block;}
+.offres_slide li.active a.item-block span{ font-size:20px;font-family: 'VWHeadlineBlkRegular';text-shadow: 0 2px 0 #FFFFFF;padding: 0 0 10px 8px; display:block;}
+	
+/******************************************************\
+*  slide (e-brochures)
+\******************************************************/
+#carousel-ebrochures{height: 142px;position: relative;}	
+#carousel-ebrochures .arrow-holder {height: 38px;}	
+#carousel-ebrochures .item-block {width: 226px;display:block;z-index: -1; position:relative;}
+#carousel-ebrochures.touchcarousel nav.touchcarousel-wrapper ul.touchcarousel-container li.touchcarousel-item a.item-block img{ display:block;}
+#carousel-ebrochures .touchcarousel-item {
+	margin: 0;padding: 0 2px 0 0;float: left;cursor: pointer;
+	background:url(../images/separateur_slide.png) no-repeat right 0 ;}
+					
+.bloc_ebrochures .touchcarousel.grey-blue .arrow-holder.left {background-color: #FFFFFF;left: 0;width: 22px;}
+.bloc_ebrochures .touchcarousel.grey-blue .arrow-holder.right {right: 0;}
+.bloc_ebrochures .touchcarousel.grey-blue .arrow-icon.left {
+	left: 0;background-image: url(../images/icon-slide_left.png);
+	background-repeat: no-repeat;width: 69px;height: 142px;
+	top:0;position: absolute;	cursor: pointer;}
+.bloc_ebrochures .touchcarousel.grey-blue .arrow-icon.right {
+	right: 0;background-image: url(../images/icon-slide_right.png);
+	background-repeat: no-repeat;	width: 69px;height: 142px;
+	top:0;position: absolute;	cursor: pointer;	}
+.bloc_ebrochures .touchcarousel .touchcarousel-container {position: relative;margin: 0; padding: 0;list-style: none; left: 0; background:url(../images/bg_carousel1.gif) repeat-x 0 0; overflow: hidden;z-index: 0;}	
+.bloc_ebrochures li.touchcarousel-item a.item-block img{padding: 4px 3px;}
+.bloc_ebrochures li.touchcarousel-item a.item-block span{ color:#646464; font-size:20px;font-family: 'VWHeadlineBlkRegular';text-shadow: 0 2px 0 #FFFFFF;padding: 0 0 10px 8px; display:block;}
+
+
+/******************************************************\
+*  slide (citadine)
+\******************************************************/
+#carousel-citadine{height: 142px;position: relative;}	
+#carousel-citadine .arrow-holder {height: 38px;}	
+#carousel-citadine .item-block {width: 226px;display:block;}
+#carousel-citadine.touchcarousel nav.touchcarousel-wrapper ul.touchcarousel-container li.touchcarousel-item a.item-block img{ display:block;}
+#carousel-citadine .touchcarousel-item {
+	margin: 0;padding: 0 2px 0 0;float: left;cursor: pointer;
+	background:url(../images/separateur_slide.png) no-repeat right 0 ;}
+					
+.type_contenaire .touchcarousel.grey-blue .arrow-holder.left {background-color: #FFFFFF;left: 0;width: 22px;}
+.type_contenaire .touchcarousel.grey-blue .arrow-holder.right {right: 0;}
+.type_contenaire.touchcarousel.grey-blue .arrow-icon.left {
+	left: 0;background-image: url(../images/icon-slide_left.png);
+	background-repeat: no-repeat;width: 69px;height: 142px;
+	top:0;position: absolute;	cursor: pointer;}
+.type_contenaire .touchcarousel.grey-blue .arrow-icon.right {
+	right: 0;background-image: url(../images/icon-slide_right.png);
+	background-repeat: no-repeat;	width: 69px;height: 142px;
+	top:0;position: absolute;	cursor: pointer;	}
+.type_contenaire .touchcarousel nav.touchcarousel-wrapper ul.touchcarousel-container{position: relative;margin: 0; padding: 0;list-style: none; left: 0; background:url(../images/bg_carousel2.gif) repeat-x 0 0; overflow: hidden;z-index: 0;}
+.type_contenaire li.touchcarousel-item a.item-block img{padding: 4px 3px;}
+.type_contenaire li.touchcarousel-item a.item-block span{ color:#cdcdcd; font-size:20px;font-family: 'VWHeadlineBkRegular';padding: 0 0 7px 8px; display:block;}	
+	
+	
+/******************************************************\
+*  slide (Berline)
+\******************************************************/
+#carousel-berline{height: 142px;position: relative;}	
+#carousel-berline .arrow-holder {height: 38px;}	
+#carousel-berline .item-block {width: 226px;display:block;}
+#carousel-berline.touchcarousel nav.touchcarousel-wrapper ul.touchcarousel-container li.touchcarousel-item a.item-block img{ display:block;}
+#carousel-berline .touchcarousel-item {
+	margin: 0;padding: 0 2px 0 0;float: left;cursor: pointer;
+	background:url(../images/separateur_slide.png) no-repeat right 0 ;}
+					
+/******************************************************\
+*  slide (Monospace)
+\******************************************************/
+#carousel-monospace{height: 142px;position: relative;}	
+#carousel-monospace .arrow-holder {height: 38px;}	
+#carousel-monospace .item-block {width: 226px;display:block;position:relative;}
+#carousel-monospace.touchcarousel nav.touchcarousel-wrapper ul.touchcarousel-container li.touchcarousel-item a.item-block img{ display:block;}
+#carousel-monospace .touchcarousel-item {
+	margin: 0;padding: 0 2px 0 0;float: left;cursor: pointer;
+	background:url(../images/separateur_slide.png) no-repeat right 0 ;}
+					
+/******************************************************\
+*  slide (Break)
+\******************************************************/
+#carousel-break{height: 142px;position: relative;}	
+#carousel-break .arrow-holder {height: 38px;}	
+#carousel-break .item-block {width: 226px;display:block;position:relative;}
+#carousel-break.touchcarousel nav.touchcarousel-wrapper ul.touchcarousel-container li.touchcarousel-item a.item-block img{ display:block;}
+#carousel-break .touchcarousel-item {
+	margin: 0;padding: 0 2px 0 0;float: left;cursor: pointer;
+	background:url(../images/separateur_slide.png) no-repeat right 0 ;}
+					
+
+/******************************************************\
+*  slide (Cabriolet)
+\******************************************************/
+#carousel-cabriolet{height: 142px;position: relative;}	
+#carousel-cabriolet .arrow-holder {height: 38px;}	
+#carousel-cabriolet .item-block {width: 226px;display:block;position:relative;}
+#carousel-cabriolet.touchcarousel nav.touchcarousel-wrapper ul.touchcarousel-container li.touchcarousel-item a.item-block img{ display:block;}
+#carousel-cabriolet .touchcarousel-item {
+	margin: 0;padding: 0 2px 0 0;float: left;cursor: pointer;
+	background:url(../images/separateur_slide.png) no-repeat right 0 ;}
+					
+
+/******************************************************\
+*  slide (Suv/4*4)
+\******************************************************/
+#carousel-suv{height: 142px;position: relative;}	
+#carousel-suv .arrow-holder {height: 38px;}	
+#carousel-suv .item-block {width: 226px;display:block;position:relative;}
+#carousel-suv.touchcarousel nav.touchcarousel-wrapper ul.touchcarousel-container li.touchcarousel-item a.item-block img{ display:block;}
+#carousel-suv .touchcarousel-item {
+	margin: 0;padding: 0 2px 0 0;float: left;cursor: pointer;
+	background:url(../images/separateur_slide.png) no-repeat right 0 ;}
+	
+
+/***************************************************************************************************************\
+
+/******************************************************\
+*  slide (Société)
+\******************************************************/
+#carousel-societe{height: 142px;position: relative;}	
+#carousel-societe .arrow-holder {height: 38px;}	
+#carousel-societe .item-block {width: 226px;display:block;position:relative;}
+#carousel-societe.touchcarousel nav.touchcarousel-wrapper ul.touchcarousel-container li.touchcarousel-item a.item-block img{ display:block;}
+#carousel-societe .touchcarousel-item {
+	margin: 0;padding: 0 2px 0 0;float: left;cursor: pointer;
+	background:url(../images/separateur_slide.png) no-repeat right 0 ;}
+
+.type_entreprise .touchcarousel.grey-blue .arrow-holder.left {background-color: #FFFFFF;left: 0;width: 22px;}
+.type_entreprise .touchcarousel.grey-blue .arrow-holder.right {right: 0;}
+.type_entreprise.touchcarousel.grey-blue .arrow-icon.left {
+	left: 0;background-image: url(../images/icon-slide_left.png);
+	background-repeat: no-repeat;width: 69px;height: 142px;
+	top:0;position: absolute;	cursor: pointer;}
+.type_entreprise .touchcarousel.grey-blue .arrow-icon.right {
+	right: 0;background-image: url(../images/icon-slide_right.png);
+	background-repeat: no-repeat;	width: 69px;height: 142px;
+	top:0;position: absolute;	cursor: pointer;	}
+.type_entreprise .touchcarousel nav.touchcarousel-wrapper ul.touchcarousel-container{position: relative;margin: 0; padding: 0;list-style: none; left: 0; background:url(../images/bg_carousel.gif) repeat-x 0 0; overflow: hidden;z-index: 0;}
+.type_entreprise li.touchcarousel-item a.item-block img{padding: 4px 3px;}
+.type_entreprise li.touchcarousel-item a.item-block span{ color:#646464; font-size:20px;font-family: 'VWHeadlineBlkRegular';text-shadow: 0 2px 0 #FFFFFF;padding: 0 0 8px 8px; display:block;}
+
+/******************************************************\
+*  slide (Business)
+\******************************************************/
+#carousel-business{height: 142px;position: relative;}	
+#carousel-business .arrow-holder {height: 38px;}	
+#carousel-business .item-block {width: 226px;display:block;z-index: -1; position:relative;}
+#carousel-business.touchcarousel nav.touchcarousel-wrapper ul.touchcarousel-container li.touchcarousel-item a.item-block img{ display:block;}
+#carousel-business .touchcarousel-item {
+	margin: 0;padding: 0 2px 0 0;float: left;cursor: pointer;
+	background:url(../images/separateur_slide.png) no-repeat right 0 ;}	
+
+/******************************************************\
+*  slide (Fonction)
+\******************************************************/
+#carousel-fonction{height: 142px;position: relative;}	
+#carousel-fonction .arrow-holder {height: 38px;}	
+#carousel-fonction .item-block {width: 226px;display:block;z-index: -1; position:relative;}
+#carousel-fonction.touchcarousel nav.touchcarousel-wrapper ul.touchcarousel-container li.touchcarousel-item a.item-block img{ display:block;}
+#carousel-fonction .touchcarousel-item {
+	margin: 0;padding: 0 2px 0 0;float: left;cursor: pointer;
+	background:url(../images/separateur_slide.png) no-repeat right 0 ;}	
+	
+/******************************************************\
+*  slide (Utilitairese)
+\******************************************************/
+#carousel-utilitaires{height: 142px;position: relative;}	
+#carousel-utilitaires .arrow-holder {height: 38px;}	
+#carousel-utilitaires .item-block {width: 226px;display:block;z-index: -1; position:relative;}
+#carousel-utilitaires.touchcarousel nav.touchcarousel-wrapper ul.touchcarousel-container li.touchcarousel-item a.item-block img{ display:block;}
+#carousel-utilitaires .touchcarousel-item {
+	margin: 0;padding: 0 2px 0 0;float: left;cursor: pointer;
+	background:url(../images/separateur_slide.png) no-repeat right 0 ;}	
+	
+/******************************************************\
+*  slide (Tourisme)
+\******************************************************/
+#carousel-tourisme{height: 142px;position: relative;}	
+#carousel-tourisme .arrow-holder {height: 38px;}	
+#carousel-tourisme .item-block {width: 226px;display:block;z-index: -1; position:relative;}
+#carousel-tourisme.touchcarousel nav.touchcarousel-wrapper ul.touchcarousel-container li.touchcarousel-item a.item-block img{ display:block;}
+#carousel-tourisme .touchcarousel-item {
+	margin: 0;padding: 0 2px 0 0;float: left;cursor: pointer;
+	background:url(../images/separateur_slide.png) no-repeat right 0 ;}		

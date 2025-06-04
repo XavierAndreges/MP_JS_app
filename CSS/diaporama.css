@@ -1,0 +1,71 @@
+    #slider {
+        width:800px;
+        height:600px;
+        overflow: hidden;
+        background-color: black;
+		display:inline-block;
+        text-align:left;
+    }
+
+    #thumbnails {
+        width:700%;
+        height: 600px;
+		text-align:left;
+		display:inline-block;
+    }
+	
+	#thumbCenterBlock {
+		display: inline-block;
+		position:relative;
+		width:800px;
+		height:600px;
+		text-align:center;
+		overflow: hidden;
+	}
+	
+	#imgThumbnailsH {   
+        width:800px;
+    }
+	
+	#imgThumbnailsV {
+		height:600px;
+    }
+
+    body {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+    }
+
+    #diaporamaFull
+    {
+        position: absolute;
+        left:0;
+        top:0;
+        background-color: red;
+		display:inline-block;
+		z-index:100;
+	}
+    
+
+    #arrow_left {
+    		width:15px;
+		height:25px;
+        position : absolute;
+    }
+	
+	#arrow_right {
+		width:15px;
+		height:25px;
+        position : absolute;
+    }
+    
+	#pagin {
+		position: absolute;
+		left:0px;
+		width: 100%;
+		display: inline-block;
+		text-align: center;
+	}
+

@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+    <head>
+        <title>Marseille Provence, tracés IGN</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta charset="UTF-8" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+            
+        <meta name="description" content="Le tracé des randonnées, accès aux falaises, marche d'approche et de retour" />
+            
+        <link rel="stylesheet" href="CSS/common.css" /><link rel="stylesheet" href="CSS/itemList.css" /><link rel="stylesheet" href="CSS/itemDetail.css" /><link rel="stylesheet" href="CSS/map.css" /><link rel="stylesheet" href="CSS/media_queries.css" /><link rel="stylesheet" href="CSS/gradient.css" />
+    
+        <script type="text/javascript" src="jquery/jquery.js"></script>
+
+		<script src="jquery/jquery-ui-1.8.23.custom.min.js"></script>
+		<script src="jquery/jquery.mousewheel.min.js"></script>
+		<script src="jquery/jquery.mCustomScrollbar.js"></script>
+            
+        <script src="jquery/jquery-ui-1.10.1.custom.js"></script>
+
+        <script src="http://api.ign.fr/geoportail/api/js/latest/GeoportalExtended.js"></script>
+        
+        <script type="text/javascript" src="js/accesIGN.js"></script>
+        
+        <script type="text/javascript" src="js/myScript/var.js"></script><script type="text/javascript" src="js/myScript/mapIGN.js"></script>
+        <script type="text/javascript" src="js/myScript/model.js"></script><script type="text/javascript" src="js/myScript/popUp.js"></script><script type="text/javascript" src="js/myScript/language.js"></script><script type="text/javascript" src="js/myScript/localisable.js"></script><script type="text/javascript" src="js/myScript/dataMP13.js"></script><script src="js/myScript/randoGeoJSON.js"></script><script src="js/myScript/canyonsGeoJSON.js"></script><script src="js/myScript/escaladeGeoJSON.js"></script>
+        
+        <script type="text/javascript" src="js/utils.js"></script>
+
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+				
+                if (isProdWeb)
+                {
+                    _gaq.push(['_setAccount', 'UA-39619730-1']);
+                    _gaq.push(['_trackPageview']);
+                    
+                    (function() {
+                     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                     })();
+                }
+            
+            
+            
+            </script>
+
+    </head>
+	
+    <body id="body" onload="onBodyLoad('accesIGN')">
+
+
+        <!------------------------------  Menu & Header ----------------------------------------->
+        
+        <div id="mobileTitle2" class="bgMobileTitle">
+            
+            <div id="mobileTitle2Left">
+                <a href="javascript:back();" id="backBtn">
+				</a>
+			</div>
+            
+			<h1 id="mobileTitle2Label">
+                Tracés IGN
+			</h1>
+            
+			<div id="mobileTitle2Right">
+                
+                <a href="javascript:watchPosition(null);" id="showUserPosition">
+                    <img src="Assets/IconUserPosition.png" width="44" height="44"/>
+                </a>
+                
+			</div>
+            
+        </div>
+
+		<div id="mainContainer" style="height:2000px">
+            
+            <!------------------------------  block map  ----------------------------------------->
+            
+            <div id="blockMap" class="corner">
+                
+                <div id="mapList" class="corner">
+                </div>
+                
+            </div>        
+            
+            <!------------------------------  End container ----------------------------------------->  
+            
+        </div>
+        
+        <div id="bugScrollPositionFixed"></div>
+        
+        <div id="modalPopUp" class="bgWhiteToUltraLightGray">
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,291 @@
+/***********************  AVIS ************************/
+#avisBlock {
+    display:inline-block;
+    width:100%;
+}
+
+
+#avisBlock fieldset {
+    margin-bottom: 30px;
+    color:#876B54;   
+    text-align: left;
+}
+
+#avisBlock fieldset a {
+    text-align: left;
+    text-decoration: underline; 
+    color:#876B54; 
+}
+
+#avisBlock fieldset legend {
+    padding: 0 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#avisPresentation {
+    color:#515e71;
+    padding: 15px 15px 0px 20px;
+    text-align:left;
+    line-height: 130%;
+}
+
+.lastRubriqueAvis {
+    margin: 15px 0 0 0;
+}
+
+.avisRubriqueTitle {
+    margin: 20px 15px 0px 15px;
+}
+
+a.avisRubriqueTitle {
+    margin: 20px 15px 0px 15px;
+    color:#515e71;
+}
+
+.avisRubriqueItem {
+    margin: 5px 15px 0px 25px;
+    color:#876B54; 
+}
+
+a.avisRubriqueItem {
+    color:#876B54; 
+}
+
+/*#a6537c;*/
+
+
+/********************* MAP ********************/
+
+#boxContentCross {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url('../../Assets/crossLight.png');
+    background-size: 100%;
+    position: absolute;
+    top:-15px;
+    right: -15px;
+    cursor: pointer;
+}
+
+#h1VeloMPM {
+    text-align: center;
+    position: absolute;
+    width: 70%;
+    margin-left: 15%;
+    top:0px;
+    font-size: 24px;
+    color: #515e71;
+}
+
+.boxContentVeloMPM {
+    display:inline-block;
+    font-size:12px;
+    padding:8px; 
+    border:#2E2A2A solid 1px;
+    color: #fff;
+}
+
+.logoVeloMPM {
+    width: 40px;
+    height: 40px;
+    float:left;  
+    border:#2E2A2A solid 0px; 
+    margin-right:10px; 
+    background-color:#fff;
+}
+
+
+#loaderRefreshVeloMPM {
+    display: inline-block;
+    position: absolute;
+    top:60px;
+    left: 17px;
+    width: 25px;
+    height: 25px;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.refreshVeloMPM {
+    background-image: url('../../Assets/btnRefresh.png');
+}
+
+.loaderVeloMPM {
+    background-image: url('../../Assets/loaderRefresh.gif');
+    
+}
+
+.boxContentBlockText {
+    /*background-color: #fff;*/
+    padding: 5px;
+    margin-left: 5px;
+    float: left;
+    display: inline-block;
+}
+
+.titleBubble {
+    float:left;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.boxContentNumber{
+    float: left;
+    width: 100%;
+    padding-top: 5px;
+    display: inline-block;
+}
+
+.boxContentIconSmall {
+    padding-right: 5px;
+    float: left;
+}
+
+.boxContentNumberText {
+    margin-top: 5px;
+    float: left;
+}
+
+#boxContentDispoVelo, #boxContentDispoPlace {
+    font-weight: bold;
+}
+
+#boxContentMainStation {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border-top:#e9e9e9 dashed 1px;
+    margin-top: 5px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.boxContentMainStationText {
+    font-size: 11px;
+    color: #e9e9e9;
+    float: left;
+    margin-left: 40px;
+}
+
+.Checkbox {
+    width:15px;
+    height:15px;
+    background-image:url('../../Assets/checkboxWhite_off.png');
+    background-size:100% 100%; 
+    margin-left:10px;
+    float: left;
+    margin-top: -1px;
+}
+
+.CheckboxOn {
+    width:15px;
+    height:15px;
+    background-image:url('../../Assets/checkboxWhite_on.png');
+    background-size:100% 100%; 
+    margin-left:10px;
+    float: left;
+    margin-top: -1px;
+}
+
+
+.markerVeloMPM {
+    position: absolute;
+    cursor: pointer;
+    width: 40px;
+    height: 63px;
+    background-image: url('../../Assets/pin/veloMPMdouble.png');
+    background-size: 100%;
+}
+
+.markerPinBlueGIF {
+    position: absolute;
+    cursor: pointer;
+    width: 40px;
+    height: 63px;
+    background-image: url('../../Assets/pinBlueGIFveloMPM.gif');
+    background-size: 100%;
+}
+
+.markerVeloMPMsmall {
+    position: absolute;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    background-image: url('../../Assets/pin/pointBleu.png');
+    background-size: 100%;
+}
+
+.markerBlueGIF {
+    position: absolute;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    background-image: url('../../Assets/pointBleu.gif');
+    background-size: 100%;
+}
+
+.markerVeloMPMverySmall {
+    position: absolute;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    background-color:blue;
+    /*
+    background-image: url('../../Assets/pin/veloMPMdouble.png');
+    background-size: 100%;
+     */
+}
+
+
+.dispoVeloMap {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    padding-top: 5px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    right: 0px;
+    position: absolute;
+}
+
+.dispoPlaceMap {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    padding-top: 0px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    right: 0px;
+    top:23px;
+    position: absolute;
+}
+
+
+
+@media only screen and (max-width: 560px)
+{
+    #h1VeloMPM {
+    text-align: center;
+    position: absolute;
+    top:15px;
+    font-size: 18px;
+    }
+
+}
+
+@media only screen and (max-width: 420px)
+{
+    #h1VeloMPM {
+    text-align: center;
+    position: absolute;
+    top:15px;
+    font-size: 12px;
+    }
+
+}

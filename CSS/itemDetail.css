@@ -1,0 +1,249 @@
+
+/************* HOME *******************/
+
+#navBarItemDetailTitle {
+    font-weight:bold;
+    color:#876B54;
+    font-size:1.1em;
+}
+
+
+.itemDetailTheme
+{
+	float: left;
+	margin:15px 0% 0% 7%;
+}
+
+.itemDetailHome
+{
+	float: right;
+	margin:15px 7% 0% 0%;
+}
+
+#blockLinkDetail {
+	width:100%; 
+	display:inline-block;
+	height:auto;
+	/*border-bottom:solid #4d4b4b 1px;
+     border-top:solid #cccccc 1px;*/
+    border-bottom:#a9a9a9 dotted 1px;
+    border-top:#a9a9a9 dotted 1px;
+    margin-top:15px;
+}
+
+.btnLinkDetail {
+    float:left;
+    padding:10px 5px 5px 5px;
+    display:inline-block;
+    color:#767878;
+    height:32px;
+}
+
+.btnLinkDetail:hover {
+	color:#876B54;
+}
+
+.btnLinkDetail img {
+    float:left;
+    margin-right:4px;
+}
+
+.btnLinkDetail span {
+    margin-top:5px;
+    float:left;
+    font-family: 'Open Sans', sans-serif;
+	/*text-shadow: 1px 1px #cccccc;*/
+    /*text-decoration:underline;*/
+}
+
+#favoriteDetailLink {
+    padding-right:7px;
+}
+
+
+.tabBarBtnDetail {
+	background-color:#2E2A2A;
+	width:32.6%;
+	height:20px;
+	float:left;
+	text-align:center;
+	border:black dashed 1px;
+	padding-top:5px;
+	color: #ffffff;
+	text-decoration:none;
+}
+
+.blocTextDetailHome, .blocTextDetail {
+	width: 100%;
+	min-width: 0px;
+	min-height:240px;
+	font-size:1.1em;
+	line-height:150%;
+}
+
+#mainVisual {
+    background-size:100% auto;
+    background-repeat:no-repeat;
+}
+
+.mainVisualHome, .mainVisual {
+	width: 100%;
+	height: 360px;
+	display: block;
+}
+
+.blocTextDetailHome p, .blocTextDetail p {
+	margin:5px;
+}
+
+
+.blockDetail {
+	width: 98%;
+	min-height:240px;
+}
+
+#readMoreTextDetailLink {
+    text-decoration:underline;
+}
+
+.blocTextDetail a {
+	color:#876B54;
+}
+
+.blocTextDetail a:hover {
+	color:#000000;
+}
+
+.labelDetailText {
+    font-weight:bold;
+    color:#876B54;
+}
+
+
+
+.optionsSliderHome {
+	width:510px;
+	height:140px;
+	margin-top:20px;
+	display:none;
+}
+
+#closeLabel{
+    float:left;
+    width:70%;
+	margin-top:8px;
+	padding:10px 15px;
+    text-transform:uppercase;
+	font-family: 'Open Sans', sans-serif;
+	text-shadow: 1px 1px #000000;
+	color:#e6e6e6;
+}
+
+/****************************************/
+
+#diaporamaReduce {
+    width:100%;
+    min-width: 0px;
+    height: 100px;
+    background-color:#000000;
+    clear: both;
+}
+/*
+#optionRelativeToItemDetail
+{
+	width:88%;
+	margin:1% 6%;
+    min-width: 480px;
+    display: inline-block;
+	
+}
+*/
+
+#optionRelativeToItemDetail
+{
+	width:40%;
+	margin:7% 5% 0 0;
+	padding:0px;
+	float:right;
+	color: #ffffff;
+	font-size:1em;
+	/*background-color:red;*/
+	display:none;
+	z-index:1; 
+	position:relative;
+	height:620px;
+	max-width:450px;
+}
+
+
+.optionItem 
+{
+	margin:0px 10px;
+	float:left;
+	padding:10px;
+	background-color:#f1f1f1;
+	/*text-decoration:none;*/
+	font-size:1em;
+	background-position:center right;
+	background-repeat:no-repeat;
+	background-size:100px 100px;
+	position:relative;
+	display: inline-block;
+}
+
+
+.optionItemTitle
+{
+	display:inline-block;
+	font-size:1.1em;
+	font-weight:bold;
+	width:100%;
+}
+
+.blockTextOptionDiv {
+	width:60%;
+	float:left;}
+
+
+.sizeForOptionItemLabelWithImage {
+	width:100%;
+	float:left;
+	clear:both;
+}
+
+.sizeForOptionItemLabel
+{
+    width:330px;
+}
+
+.visualOptionDiv {
+	float:right;
+	width:120px;
+	height:80px;
+	margin-right:-10px;
+	border:#767878 solid 1px;
+	background-repeat:no-repeat;
+	background-size:100% auto;
+}
+
+
+#optionRelativeToItemDetail div div
+{
+	color:#cccccc;
+	margin-bottom:2px;
+}
+
+/*
+.optionItem div:first-child
+{
+	font-size:1.1em;
+	font-weight: bold;
+}
+*/
+
+.linkInOptionsDiv {
+	margin-top:5px;
+	width:60%;
+	display:inline-block;
+	float:left;
+}

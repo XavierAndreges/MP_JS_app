@@ -1,0 +1,6 @@
+#! /bin/bash
+
+#cat distance.js HtmlSliderReduceScreen.js itemList.js language.js mainScript.js mapItems.js mapIGN.js menu.js transitions.js var.js model.js sliderFullScreen.js SliderMediumScreen.js SliderReduceScreen.js spatialite.js> script_v6_2.js
+
+
+cat distance.js HtmlSliderReduceScreen.js itemList.js language.js mapItems.js mapIGN.js menu.js mainScript.js ImageManager.js transitions.js var.js model.js sliderFullScreen.js SliderMediumScreen.js SliderReduceScreen.js spatialite.js dataCDT.js dataMP13.js dataMPM.js canyonsGeoJSON.js escaladeGeoJSON.js randoGeoJSON.js > ../mini/script_v1_1.js

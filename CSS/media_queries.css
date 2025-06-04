@@ -1,0 +1,1445 @@
+@media only screen and (max-width:3000px)
+{
+/*
+    body:before {
+        content: "Version new";
+        display: block;
+        color: red;
+        text-align: center;
+        font-style: italic;
+		position:absolute;
+		top:0px;
+		left:0px;
+		width:100%;
+		z-index:100;
+    }
+*/
+    #insideTableMenu {
+        width: 50%;
+        margin: 5px 10px 5px 0;
+        display: inline-block;
+        text-align:right;
+		float:right;
+    }
+	
+	
+	#btnMainMenu {
+		width:58px;
+		height:38px; 
+		margin-top:3px;
+	}
+    
+    #bgImage {
+		position:relative;
+        height:480px;
+	}
+    
+    .diapoCategoryArrowLeft {
+        position: absolute;
+        width: 20px;
+        top:0px;
+        display: none;
+        padding-right:15px;
+        z-index: 5030;
+    }
+    
+     .diapoCategoryArrowLeft img, .diapoCategoryArrowRight img
+    {
+        width: 18px;
+        height: auto;
+    }
+
+    .diapoCategoryArrowRight {
+        position: absolute;
+        width: 20px;
+        right:0px;
+        top:0px;
+        display: none;
+        padding-left:15px;
+        z-index: 2;
+    }
+    
+    #diapoCategory {
+        display:inline-block;
+        width:100%;
+        height:55px;
+        background-color: #515e71;
+        margin-bottom:-4px;
+        position:relative;
+        z-index: 2;
+        border-top:#a9a9a9 dotted 1px;
+    }
+
+
+    .diapoCategoryBtn {
+        display: inline-block;
+        text-align: center;
+        width: 70px;
+        margin: 0;
+        color:#9a9a9a;
+        font-weight: bold;
+        font-size: 2em;
+        float: left;
+    }
+    
+    .diapoCategoryBtn img {
+        margin-top: -1px;
+        margin-left: -2px;
+    }
+    
+    
+    #diapoHome {
+        display:inline-block;
+        width:100%;
+        height:55px;
+        /*background-color: #515e71;*/
+        margin-bottom:-4px;
+        position:relative;
+        z-index: 2;
+        border-top:#a9a9a9 dotted 1px;
+        border-bottom:#a9a9a9 dotted 1px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    
+    .diapoHomeBtn {
+        display: inline-block;
+        text-align: center;
+        width: 25%;
+        margin: 0;
+        color:#9a9a9a;
+        font-weight: bold;
+        font-size: 2em;
+        float: left;
+    }
+    
+    .diapoHomeBtn img {
+        width: 44px;
+        height: 44px;
+        margin-top: 6px;
+    }
+    
+
+    .cercleSousType {
+        width:37px;
+        height:37px;
+        margin-top: 8px;
+        position:relative;
+        background-image:url('../Assets/pastilles/Afond_blancNoir.png');
+        background-size:100% 100%;
+        z-index:100;
+        float: left;
+    }
+
+    
+    #mobileTitle2 {
+        width:100%;
+        height:35px;
+        position:fixed;
+        display:none;
+        left:0px;
+        top:0px;
+        padding:12px 0px 12px 0px;
+        color:#a6537c;
+        text-align:center;
+        margin:0px;
+        z-index:5003;
+        font-family: 'Open Sans', sans-serif;
+        /*text-shadow: 2px 2px #000000;*/
+        font-weight: bold;
+        border-bottom:#a9a9a9 dotted 1px;
+	}
+    
+    .bgMobileTitle {
+        /*background-color:#285090;*/
+        background-color:#ffffff;
+    }
+    
+	#mobileTitle2Label {
+        width:62%;
+        float:left;
+        font-size:14px;
+        line-height:130%;
+        display:inline-block;
+        text-transform:uppercase;
+        /*******  also set in language.js ******/
+        margin-top:8px;
+        overflow:hidden;
+	}
+    
+	#mobileTitle2Left{
+		width:17%;
+		margin-left:4px;
+        display:inline-block;
+        float:left;
+        text-align:left;
+	}
+    
+	
+	#mobileTitle2Right {
+		width:18%;
+		margin-right:4px;
+        float:right;
+        display:inline-block;
+        text-align:right;
+	}
+    
+    
+    .pastilleTypeHome {
+    width:37px;
+    height:37px;
+    background-image:url('../Assets/pastilles/Afond_pastille3.png');
+    background-size:100% 100%;
+    z-index:100;
+    margin-bottom: -27px;
+    margin-left: 20px;
+        margin-top: -8px;
+}
+    
+    
+    .activityPicto {
+        display:inline-block;
+        margin-right:10px;
+        width:20px;
+        height:20px;
+    }
+    
+    
+    #mainContainer {
+        display:inline-block;
+        width:100%;
+        position:relative;
+        z-index:0;
+    }
+	
+    #leftHomeSelectionBlock{
+        margin:0px;
+    }
+    
+    
+    .homeSelection {
+        display:inline-block;
+        float:left;
+        width:100%;
+        height:150px;
+        background-size:100% auto;
+        background-position:center;
+        margin-top:20px;
+    }
+    
+    #homeSelection1 {
+        background-image:url('../pictures/Home/Morgiou_small.jpg');
+    }
+    
+    #homeSelection2 {
+        background-image:url('../pictures/Monuments/panier/480/Image2.jpg');
+    }
+    
+    #homeSelection3 {
+        background-image:url('../pictures/Home/MucemFortMajor_small.jpg');
+    }
+    
+    
+    #homeSelection4 {
+        background-image:url('../pictures/Home/Espace361_small.jpg');
+    }
+    
+    
+
+	#startVisitBtnCircuit {
+		width: 100%;
+		height:30px;
+		text-align:center;
+		margin-top:10px;
+		font-weight:bold;
+		color:#000000;
+		padding-top:15px;
+		background-image:url('../Assets/btnGrey.png');
+		background-repeat:no-repeat;
+		background-position:center;
+		background-size:100% 40px;
+	}
+	
+
+	.mainVisualOptionList {
+		float:left;
+		margin:10px;
+		width:80px;
+		height:80px;
+	}
+	
+	.blocTextList div
+	{
+		margin-bottom:4px;
+	}
+	
+	.blocTextList {
+	    float: left;
+	    width: 100%;
+	    min-width: 0px;
+	    margin: 0px 0% 0% 0px;
+        font-size: 16px;
+        color:#ffffff;
+        line-height:130%;
+        margin-top: -23px;
+        position: relative;
+	}
+	
+	.blocTextOptionList {
+		float: left;
+		width: 65%;
+		min-width: 0px;
+		margin: 10px 0px 0px 5px;
+	}
+	
+	.blocTextOptionList div {
+		margin-bottom : 4px;
+	}
+	
+
+    #blocTextDetail {
+        width: 100%;
+        min-width: 0px;
+        min-height:0px;
+        font-size:16px;
+    }
+    
+    .technicalInfosDetail {
+        font-size:12px;
+        margin-bottom: 10px;
+    }
+	
+    .titleLabelCell{
+        font-weight:bold;
+        width:100%;
+        display:inline-block;
+        color:#70003F;
+    }
+    
+    .cityLabelCell {
+        font-style:italic;
+        color:#2E2A2A;
+        margin-top:-2px;
+    }
+    
+    .mountainsLabelCell {
+        color:#2E2A2A;
+        font-weight:bold;
+    }
+    
+    
+/*************** (max-width:945px) ************/
+    
+	.itemDetailHome, .itemDetailTheme
+	{
+		width:96%;
+		margin: 10px 0;
+		padding: 2%;
+		float: left;
+		min-width: 0px;
+		background-color:#ffffff;
+		color: #2E2A2A;
+        position:relative;
+        z-index:1;
+        display:  none;
+        overflow-x:hidden;
+	}
+	
+	.optionsSliderHome {
+		width:40%;
+		height:140px;
+		margin-top:20px;
+		display:none;
+		background-color:#2E2A2A;
+	}
+
+    #mainVisual {
+		width: 100%;
+		height:400px;
+    }
+    
+    #diaporamaReduce {
+		width:100%;
+		min-width: 0px;
+		height: 100px;
+		background-color:#FFFFFF;
+		clear: both;
+	}
+    
+    
+    #closeLinkTitle {
+        width:100%;
+        display:none;
+        left:0px;
+        top:0px;
+        padding:10px 0 10px 0;
+        color:#a9a9a9;
+        z-index:100;
+        text-align:center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight:bold;
+        margin-top:20px;
+        margin-bottom:30px;
+        font-size:1.3em;
+        text-transform:uppercase;
+        border-top:#a9a9a9 dotted 1px;
+        border-bottom:#a9a9a9 dotted 1px;
+    }
+    
+		
+	#optionRelativeToItemDetail
+	{
+		width:96%;
+		margin:2%;
+		display: inline-block;
+	    min-width: 0px;
+		padding:0px;
+		color: #ffffff;
+		font-size:1em;
+		display:none;
+		z-index:1; 
+		position:relative;
+	}
+	
+	.optionItem 
+	{
+		margin:0px 10px;
+		float:left;
+		padding:10px;
+		background-color:#f1f1f1;
+		text-decoration:none;
+		font-size:1em;
+		background-position:right;
+		background-repeat:no-repeat;
+		position:relative;
+		display: inline-block;
+		background-size:80px 80px;
+	}
+
+	#optionRelativeToItemDetail div div
+	{
+		color:#cccccc;
+		margin-bottom:1px;
+	}
+	
+
+	#blockMap {
+		width:100%;
+        margin:0;
+        padding:0%;
+        /*border:solid 1px #cccccc;*/
+		min-width: 0px;
+        background-color: #f1f1f1;
+	}
+	
+	#mapList {
+        width:100%;
+        margin:0;
+        padding:0;
+        height:350px;
+    }
+		
+	#itemMapDetail {
+		position: absolute;
+		top: 0px;
+		left:  0px;
+		display: none;
+		width : 80%;
+		height: 100%;
+		background-color:#2E2A2A;
+		color:#ffffff;
+		margin: 5%;
+		padding:5%;
+		z-index:100;
+	}
+    
+		
+	#map_croix_off {
+		position: relative;
+		top: 0px;
+		left: 92%;
+		z-index:101;
+		display:inline-block;
+	}
+	
+	.mapTextBtn {
+		font-size: 0.8em;
+	}
+    
+    #carousel-image-and-text {
+        height: 30px;
+        position: relative;
+        width: 100%;
+        margin-left:0%;
+    }
+    
+    #carousel-image-and-text .item-block
+    {
+		width:120px;
+        font-size:1.1em;
+        height:20px;
+        padding-top : 5px;
+    }
+    
+    
+    #linkHomeVieuxPortRD_map {
+        width:100%;
+        height:360px;
+        border:#767878 solid 0px;
+        background-repeat:no-repeat;
+        background-position:center;
+    }
+    
+    #startVisitBtnCircuit {
+        display:inline-block;
+        width: 100%;
+        height:35px;
+        text-align:center;
+        margin-top:0px;
+        margin-bottom:15px;
+        font-weight:bold;
+        color:#000000;
+        padding-top:15px;
+        background-image:url('../Assets/btnGrey.png');
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size:100% 50px;
+        font-size:1.2em;
+        /*background-color:red;*/
+    }
+    
+    
+    #bgImage {
+		position:relative;
+        height:480px;
+        top:0px;
+	}
+	
+    
+    
+    #navBarItemDetailTitle {
+        display:none;
+        background-color:red;
+	}
+	
+	#prevNextDetail {
+        margin-top:10px;
+	}
+	
+	.btnPrevNextDetail {
+        width:25px;
+        height:20px;
+	}
+	
+	#showMapBtn {
+		margin-top:-3px;
+	}
+	
+	#backBtn:hover {
+	background-image:url('../Assets/bouton_back3.png');
+	}
+
+	.btnPrevNextDetail:first-child:hover {
+		background-image:url('../Assets/btn_prev3.png');
+	}
+
+	.btnPrevNextDetail:hover {
+		background-image:url('../Assets/btn_next3.png');
+	}
+    
+    /*
+     Version mobile - de 766";
+    */
+
+    
+    
+	.mainHomeItemsBlock {
+		opacity:1.0;
+		display: none;
+		width:100%;
+        height:auto;
+        text-align:right;
+	}
+	
+	
+	#itemList {
+      width:100%;
+      margin-top:0px;
+	  margin-left:0%;
+	  margin-right:0%;
+	  padding:0px 0 0 0;
+	  min-width:0px;
+      height:auto;
+      display:inline-block;
+      overflow:visible;
+	}
+    
+    #hackItemListMarginBottom {
+        display:inline-block;
+        width:100%;
+        height:1px;
+        z-index:1;
+        margin-bottom:20px;
+    }
+    
+    
+    .planJPG {
+        margin:15px 0% 0 0%;
+        width:100%;
+	}
+	
+	.itemListHome {
+		margin-top:10px;
+	}
+    
+	
+	.itemListOptionsTheme {
+		margin-left:5%;
+	}
+	
+	#searchForm {
+	  margin: 10px 2% 0 2%;
+	}
+    
+    .searchFormHome {
+        width:96%;
+    }
+    
+    .searchForm {
+        width:45%;
+    }
+    
+    .swithItemListBtn
+    {
+        display:inline-block;
+        width:43%;
+        height:45px;
+        margin: 0px 0px 0px 2%;
+        padding:1% 2%;
+        color:#ffffff;
+    }
+     
+	 
+	.moreHome {
+        width:100%;
+        height:112px;
+	}
+	
+    
+    #closeLinkDetail {
+        display: inline-block;
+    }
+	
+    /*
+     Version mobile - de 946";
+     */
+    
+	#leftHomeSelectionBlock
+	{
+		width:100%;
+        height: 100px;
+		margin:10px 0px 10px 0;
+		padding:0px 0px 0 0;
+		line-height:150%;
+		float:left;
+		z-index:1;
+        display:inline-block;
+        position:relative;
+        font-size:1.2em;
+        overflow: hidden;
+        /*border-top: 1px dotted #a9a9a9;*/
+	}
+        
+    .swiper-container_home {
+        width:100%;
+        height: auto;
+    }
+	
+	.blockDetail {
+	width: 100%;
+	min-height:240px;
+}
+    
+    #mainVisual {
+		width: 100%;
+		height:420px;
+    }
+    
+	
+	
+	#leftHomeOptionBlock {
+		width: 80%;
+		margin:0px 10% 0px 10%;
+		padding:0px;
+		max-width:80%;
+        position:relative;
+        display:none;
+	}
+
+
+	#itemListOptions {
+	width:90%;
+	height:auto;
+    z-index:100;
+	}
+		
+	.itemListOptions {
+		margin-right:5%;
+        display:inline-block;
+	}
+
+
+	
+	.btnFilterList {
+		width:65px;
+		font-size:1.1em;
+		height:26px;
+		padding-top:12px;
+		margin:2px 0px 0 0px;
+		color:#ffffff;
+		text-align:center;
+		font-weight:bold;
+		background-image:url('../Assets/btn_noir.png');
+		background-repeat:no-repeat;
+		background-size:100% 100%;
+		display:inline-block;
+	}
+    
+    .btnMainFilterList {
+		width:66px;
+		font-size:1.1em;
+		height:22px;
+		padding-top:7px;
+		margin:0px 0px 0 0px;
+		color:#ffffff;
+		text-align:center;
+		font-weight:bold;
+		background-repeat:no-repeat;
+		background-size:100% 100%;
+		display:inline-block;
+       border: #e6e6e6 solid 1px;
+        background-image:url(../Assets/background/bodyWhiteBtn.png)
+	}
+    
+    .btnMainFilterList img {
+        margin-top:-4px;
+        width:23px;
+        height:23px;
+    }
+
+	#btnMainMenu {
+		display: inline;
+		float:right;
+		width:50px;
+		height:44px; 
+		text-align: center;
+		background-repeat:no-repeat;
+		background-position:center;
+	} 
+	
+	#mainMenu {
+		display:inline-block;
+		width:300px;
+		position:fixed;
+		top:6px;
+		left:-250px;
+		/*z-index:5003;*/
+        z-index:5003;
+        height:10px;
+        overflow:visible;
+	}
+    
+    #closeLabel{
+        margin:10px 0px 0px 0px;
+        padding:12px;
+        font-size:1.2em;
+        display:none;
+    }
+    
+    #optionMapBtn {
+        display:none;
+    }
+    
+    
+	#showMapBtn:hover, #optionMapBtn:hover, #showSettings:hover, #showUserPosition:hover, .closeBtnItemList:hover, .genericBlackBtn:hover, .btnSousTypePopUp:hover, btnPopUpMapSettings:hover, .btnSousTypeMP2013:hover, .btnPopUpMapSettings:hover, .genericGrayBtn:hover {
+        opacity:1;
+    }
+    
+    /*
+     Version mobile - de 946";
+     */
+    
+   
+    #blockMap {
+		width:100%;
+        margin: -3px 0px 0px 0px;
+        padding:0px;
+		min-width: 0px;
+        border:none;
+	}
+	
+     
+	#mapList {
+        width:100%;
+        margin:0px;
+        padding:0px;
+        height:350px;
+        clear:both;
+    }
+    
+    .btnPopUpMapSettings {
+        display:inline-block;
+        width:100%;
+        height:23px;
+        color:#f1f1f1;
+        font-weight:bold;
+        text-align:center;
+        background-repeat:no-repeat;
+        background-size:100% 30px;
+        padding-top:7px;
+    }
+}
+
+@media only screen and (max-width: 766px)
+{
+    #bgImage {
+		position:relative;
+        height:330px;
+	}
+    
+    #bgImageTitle p {
+        font-size: 14px;
+    }
+    
+    .activityPicto {
+        padding-top:4px;
+        margin-bottom: -4px;
+        
+    }
+    
+    .btnSousTypePopUp {
+        font-size:1.2em;
+    }
+}
+
+@media only screen and (max-width: 700px)
+{
+    /************** circuits ****************/
+    
+    #cellPartner{
+        display:inline-block;
+        position:absolute;
+        right:40px;
+        top:40px;
+        width:240px;
+        height:170px;
+        background-size:100% 100%;
+        z-index:5000;
+    }
+    
+    #circuitsSwiper{
+        width:100%;
+        height:120px;
+        margin-bottom:10px;
+        position: absolute;
+        bottom: 0px;
+        left:0px;
+        display: inline-block;
+        text-align:center;
+        z-index:5001;
+        overflow:hidden;
+        /*background-color: rgba(255,255,255,0.6);*/
+        border-bottom:#000 solid 1px;
+    }
+    
+    .swiper-container_map {
+        width: 240px;
+        height:120px;
+        overflow:visible;
+        display: inline-block;
+    }
+    
+    .swiper-slide_map {
+        background-position: center;
+        background-size: cover;
+        width: 238px;
+        height: 119px;
+        border-top:#000 solid 1px;
+        border-right:#000 solid 1px;
+        border-left:#000 solid 1px;
+        display: inline-block;
+    }
+    
+    #circuitsBtnSwiper {
+        width:100%;
+        height:30px;
+        position: absolute;
+        left:0px;
+        bottom: 0px;
+        text-align:left;
+        z-index:5003;
+        overflow:hidden;
+    }
+    
+    #btnSwiperOffOn {
+        border:#000 solid 1px;
+        width:30px;
+        height:30px;
+    }
+    
+    
+    /************************* pop up *******************/
+    
+    
+    #popUpCell {
+        display:inline-block;
+        position: relative;
+        font-size:1.1em;
+        z-index:5002;
+        padding:0px;
+        width: 240px;
+        height: 150px;
+        border:#2E2A2A solid 1px;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+    
+    #clickPopUpCell {
+        display:inline-block;
+        z-index:5002;
+        width: 240px;
+        height: 150px;
+    }
+    
+    
+    #btnWalkPopUp {
+        display: inline-block;
+        width: 40px;
+        padding: 5px 2%;
+        position:absolute;
+        bottom:65px;
+        right: 0px;
+        text-align: right;
+        z-index:5003; 
+    }
+    
+    #btnCarPopUp {
+        display: inline-block;
+        width: 40px;
+        padding: 5px 2%;
+        position:absolute;
+        bottom:25px;
+        right: 0px;
+        text-align: right;
+        z-index:5003; 
+    }
+    
+    
+    #btnWalkPopUp img, #btnCarPopUp img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 600px)
+{
+    #mainVisual, #diaporamaReduceMap {
+        width: 100%;
+        height:220px;
+    }
+    
+    
+    #hackItemListMarginBottom {
+
+        margin-bottom:10px;
+    }
+    
+    #bgImageTitle p {
+        font-size: 12px;
+    }
+    
+    #diapoHome {
+        display:inline-block;
+        width:100%;
+        height:45px;
+        margin-bottom:-4px;
+        position:relative;
+        z-index: 2;
+        border-top:#a9a9a9 dotted 1px;
+        border-bottom:#a9a9a9 dotted 1px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    
+    .diapoHomeBtn {
+        display: inline-block;
+        text-align: center;
+        width: 25%;
+        margin: 0;
+        color:#9a9a9a;
+        font-weight: bold;
+        font-size: 2em;
+        float: left;
+    }
+    
+    .diapoHomeBtn img {
+        width: 35px;
+        height: 35px;
+        margin-top: 5px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 550px)
+{
+/*
+	body:before {
+        content: "Version iPhone paysage";
+        display: block;
+        color: red;
+        text-align: center;
+        font-style: italic;
+		position:absolute;
+		top:0px;
+		left:0px;
+		width:100%;
+		z-index:100;
+    }
+*/
+
+
+
+/*
+.mainHomeTitle
+{
+    font-size:1.2em;
+    opacity:1.0;
+    margin:0px;
+    display:block;
+    padding:0px 0 0px 0;
+    height:59px;
+    width:50%;
+    float:left;
+    text-align:center;
+}
+
+.mainHomeTitle:first-child
+{
+    margin-top:0px;
+}
+ */
+
+
+
+    #linkHomeVieuxPortRD_map {
+        width:480px;
+        height:360px;
+        border:#767878 solid 0px;
+        background-repeat:no-repeat;
+        background-position:center;
+    }
+    
+	
+	#bgImage {
+        height:230px;
+        position:relative;
+    }
+	
+    /*************** BIG ****************/
+    
+    .itemHome
+    {
+        display:inline-block;
+        width:200px;
+        height:240px;
+        background-position:center;
+        background-size:100% auto;
+        margin:0 10px 15px 10px;
+        text-decoration:none;
+        float:left;
+        text-align:left;
+        font-size:1em;
+    }
+    
+    .mainVisualList {
+        float: left;
+        margin:0;
+        display:inline-block;
+        width:200px;
+        height:150px;
+        background-size:100% auto;
+        background-repeat:no-repeat;
+        background-position:center center;
+        position:relative;
+    }
+    
+    .blocTextList {
+	    float: left;
+	    width: 100%;
+	    min-width: 0px;
+	    margin: 0px 0% 0% 0px;
+        font-size: 13px;
+        color:#ffffff;
+        line-height:130%;
+        margin-top: -22px;
+	}
+    
+    
+    /*************** SMALL ****************/
+
+.itemHomeSmall
+    {
+        display:inline-block;
+        width:200px;
+        height:240px;
+        background-position:center;
+        background-size:100% auto;
+        margin:0 10px 15px 10px;
+        text-decoration:none;
+        float:left;
+        text-align:left;
+        font-size:1em;
+    }
+
+.mainVisualListSmall {
+        float: left;
+        margin:0;
+        display:inline-block;
+        width:200px;
+        height:150px;
+        background-size:auto 100%;
+        background-repeat:no-repeat;
+        background-position:center center;
+        position:relative;
+    }
+
+.blocTextListSmall {
+	    float: left;
+	    width: 100%;
+	    min-width: 0px;
+	    margin: 0px 0% 0% 0px;
+        font-size:1.2em;
+        color:#ffffff;
+        line-height:130%;
+        margin-top: -22px;
+	}
+
+.blocTextListSmall div
+	{
+		margin-bottom:4px;
+	}
+    
+/************************************/
+    
+    
+    #itemListBottomBtn a {
+        font-size: 14px;
+    }
+    
+	
+	#leftHomeOptionBlock {
+		width:96%;
+		margin:0px;
+		padding:0% 2%;
+		max-width:96%;
+        position:relative;
+	}
+	
+    .sizeForOptionItemLabel {
+        width:400px;
+    }
+
+    #mainVisual {
+		width: 100%;
+		height:220px;
+    }
+    
+    #backBtn:hover {
+        opacity:1;
+    }
+	
+	.visualOptionDiv {
+		margin-top:10px;
+		width:100px;
+		height:70px;
+		background-size:100% auto;
+	}
+    
+    .btnSousTypePopUp {
+        font-size:1em;
+    }
+}
+
+
+@media only screen and (max-width: 450px)
+{
+/*
+	body:before {
+        content: "Version iPhone portrait";
+        display: block;
+        color: red;
+        text-align: center;
+        font-style: italic;
+		position:absolute;
+		top:0px;
+		left:0px;
+		width:100%;
+		z-index:100;
+    }
+*/
+
+    
+    
+    #diapoHome {
+        border-bottom:none;
+        padding-top: 15px;
+        padding-bottom: 0px;
+    }
+    
+    #hackItemListMarginBottom {
+        margin-bottom:0px;
+    }
+    
+    #diapoCategory {
+        display:inline-block;
+        width:80%;
+        height:45px;
+        background-color: #515e71;
+        margin-bottom:-4px;
+        position:relative;
+        z-index: 2;
+        border-top:#a9a9a9 dotted 1px;
+    }
+    
+    .diapoCategoryBtn {
+        display: inline-block;
+        text-align: center;
+        width: 50px;
+        margin: 0;
+        color:#9a9a9a;
+        font-weight: bold;
+        font-size: 2em;
+        float: left;
+    }
+    
+    .diapoCategoryBtn img {
+        margin-top: 0px;
+        margin-left: 0px;
+        width:30px;
+        height:30px;
+    }
+    
+    
+    .cercleSousType {
+        width:30px;
+        height:30px;
+        margin-top: 8px;
+        position:relative;
+        background-image:url('../Assets/pastilles/Afond_blancNoir.png');
+        background-size:100% 100%;
+        z-index:100;
+        float: left;
+    }
+    
+    
+    .mainHomeTitle
+{
+    font-size:0.9em;
+}
+        
+    
+#itemList, #itemListBottomBtn {
+    width:92%;
+    margin-left:4%;
+    margin-right:4%;
+}
+
+#itemList div
+{
+    font-size:1.05em;
+}
+
+#itemList .itemPractical
+{
+    font-size:1em;
+    position:relative;
+}
+
+.itemHome
+{
+    width:100%;
+    margin:0px 0% 3px 0;
+    height:230px;
+    padding:0px 0;
+    text-decoration:none;
+    min-width:0px;
+    display:inline-block;
+}
+
+.mainVisualList {
+    float:left;
+    margin:0px 0% 0 0px;
+    width:100%;
+    height:180px;
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    background-position:center center;
+    position:relative;
+}
+    
+    
+.macaron0 {
+    height: 65px;
+    /*
+    margin-right: -12px;
+    margin-top: -50px;
+    */
+    width: 65px;
+    position: absolute;
+    right:-13px;
+    top:-13px;
+}
+
+/*
+.macaron1 {
+    height: 65px;
+    width: 65px;
+    position: absolute;
+    right:-14px;
+    top:50px;
+}
+*/
+
+.blocTextList div
+{
+    margin-bottom:3px;
+}
+
+.blocTextList {
+    float: left;
+    width: 100%;
+    min-width: 0px;
+    margin-top:-20px;
+}
+    
+.gradientTypeLabel {
+        padding: 2px 2px 2px 2px;;
+}
+
+    
+.itemHomeSmall
+{
+    width:100%;
+    margin:0px 0% 3px 0;
+    height:105px;
+    padding:10px 0;
+    text-decoration:none;
+    min-width:0px;
+    display:inline-block;
+    border-top:#a9a9a9 dotted 1px;
+}
+
+.mainVisualListSmall {
+    float:left;
+    margin:0px 0% 0 0px;
+    width:140px;
+    height:105px;
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    background-position:center center;
+    position:relative;
+}
+
+.macaronSmall0 {
+    /*
+    margin-top:-50px;
+    margin-right:0px;
+    margin-left: -15px;
+    float: left;
+    */
+    background-size: 90%;
+    position: absolute;
+    left:-13px;
+    top:-13px;
+}
+    
+.macaronSmall1 {
+    /*
+    margin-top:-50px;
+    margin-right:0px;
+    margin-left: -15px;
+    float: left;
+    */
+    background-size: 90%;
+    position: absolute;
+    bottom:-22px;
+    left:-13px;
+}
+
+.blocTextListSmall div
+{
+    margin-bottom:4px;
+}
+
+.blocTextListSmall {
+    float: left;
+    width: 50%;
+    min-width: 0px;
+    margin: 10px 0% 0% 10px;
+    color: #ffffff;
+    font-size: 1.2em;
+    line-height: 130%;
+}
+
+#closeLinkTitle {
+    margin-top:10px;
+    margin-bottom:0px;
+    border-bottom:#a9a9a9 dotted 0px;
+}
+
+
+    #linkHomeVieuxPortRD_map {
+        width:100%;
+        height:240px;
+        border:#767878 solid 0px;
+        background-repeat:no-repeat;
+        background-position:center;
+    }
+    
+	.blockTextOptionDiv {
+		width:60%;
+	}
+
+    .sizeForOptionItemLabel {
+        width:240px;
+    }
+    
+    .btnLinkDetail {
+        width:47%;
+        padding:5px 0 5px 4px;
+        display:inline-block;
+		font-size:0.95em;
+    }
+    
+    #favoriteDetailLink {
+        padding-right:0px;
+    }
+    
+    #backBtn:hover {
+        opacity:1;
+    }
+	
+    #leftHomeOptionBlock {
+		width:96%;
+		margin:0px;
+		padding:0% 2%;
+		max-width:96%;
+        position:relative;
+	}
+        
+}
+

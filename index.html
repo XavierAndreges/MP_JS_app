@@ -1,0 +1,425 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+    <head>
+        <title>Marseille Provence 2013 entre nature et culture</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="UTF-8" />
+        
+        <meta name="description" content="Marseille Provence 2013 entre nature et culture ! Découvrez le programme de la Capitale européenne de la culture MP2013 ainsi que toutes les richesses touristiques et naturelles de la région." />
+        
+        <meta name="Keywords" content="Marseille Provence 2013, MP2013, nature, culture, musée, expo, expositions, randonnée, site naturel, escalade, canyoning, transport, tourisme" />
+     
+        <link rel="stylesheet" href="CSS/jquery.mCustomScrollbar.css" />
+        <link rel="stylesheet" href="CSS/photoswipe.css" />
+		
+        <!--<link rel="stylesheet" href="CSS/styles.css" />-->
+        
+		<link href="CSS/ui-darkness/jquery-ui-1.10.1.custom.css" rel="stylesheet" />
+        <link rel="stylesheet" href="CSS/swiper.css">
+        
+        <link rel="stylesheet" href="leaflet/leaflet.css" />
+        
+        <!--[if lte IE 8]><link rel="stylesheet" href="leaflet/leaflet.ie.css" /><![endif]-->
+        
+        <link rel="stylesheet" href="CSS/common.css" /><link rel="stylesheet" href="CSS/itemList.css" /><link rel="stylesheet" href="CSS/itemDetail.css" /><link rel="stylesheet" href="CSS/map.css" /><link rel="stylesheet" href="CSS/media_queries.css" /><link rel="stylesheet" href="CSS/gradient.css" />
+        
+        <link rel="alternate" hreflang="en" href="http://www.lajouquasse.fr/marseilleprovence/index.html#en" />
+        <link rel="alternate" hreflang="de" href="http://www.lajouquasse.fr/marseilleprovence/index.html#de" />
+        <link rel="alternate" hreflang="es" href="http://www.lajouquasse.fr/marseilleprovence/index.html#es" />
+        
+        <script type="text/javascript" src="jquery/jquery.js"></script>
+        
+        <script type="text/javascript" src="hammer/hammer_v1_0_5.js"></script>
+        <script type="text/javascript" src="hammer/jquery.hammer.js"></script>
+        
+        <script type="text/javascript" src="jquery/klass.min.js"></script>
+        <script type="text/javascript" src="jquery/code.photoswipe-3.0.5.js"></script>
+        
+		<script src="jquery/jquery-ui-1.8.23.custom.min.js"></script>
+		<script src="jquery/jquery.mousewheel.min.js"></script>
+		<script src="jquery/jquery.mCustomScrollbar.js"></script>
+		
+		<script src="jquery/jquery-ui-1.10.1.custom.js"></script>
+                
+        <script type="text/javascript" src="leaflet/leaflet.js"></script>
+        <script type="text/javascript" src="js/SQLitePlugin.js"></script>
+        <!--<script type="text/javascript" src="js/cordova.js"></script><script type="text/javascript" src="js/GAPlugin.js"></script>-->
+        
+        <script type="text/javascript" src="js/idangerous.swiper.js"></script>
+
+        <script type="text/javascript" src="js/myScript/var.js"></script><script type="text/javascript" src="js/myScript/model.js"></script><script type="text/javascript" src="js/myScript/popUp.js"></script><script type="text/javascript" src="js/myScript/mainScript.js"></script><script type="text/javascript" src="js/myScript/ImageManager.js"></script><script type="text/javascript" src="js/myScript/photoSwipe.js"></script><script type="text/javascript" src="js/myScript/localisable.js"></script><script type="text/javascript" src="js/myScript/language.js"></script><script type="text/javascript" src="js/myScript/distance.js"></script><script type="text/javascript" src="js/myScript/menu.js"></script><script type="text/javascript" src="js/myScript/transitions.js"></script><script type="text/javascript" src="js/myScript/trier.js"></script><script type="text/javascript" src="js/myScript/itemList.js"></script><script type="text/javascript" src="js/myScript/itemDetail.js"></script><script type="text/javascript" src="js/myScript/mapItems.js"></script><script type="text/javascript" src="js/myScript/mapIGN.js"></script><script type="text/javascript" src="js/myScript/SliderReduceScreen.js"></script><script type="text/javascript" src="js/myScript/SliderMediumScreen.js"></script><script type="text/javascript" src="js/myScript/sliderFullScreen.js"></script><script type="text/javascript" src="js/myScript/HtmlSliderReduceScreen.js"></script><script type="text/javascript" src="js/myScript/spatialite.js"></script><script type="text/javascript" src="js/myScript/dataMP13.js"></script><script src="js/myScript/randoGeoJSON.js"></script><script src="js/myScript/canyonsGeoJSON.js"></script><script src="js/myScript/escaladeGeoJSON.js"></script><script type="text/javascript" src="js/myScript/dataCDT.js"></script><script type="text/javascript" src="js/myScript/dataMPM.js"></script>
+        
+        <script type="text/javascript" src="js/utils.js"></script>
+		<script type="text/javascript" src="js/InfoBubble.js"></script>
+        <script type="text/javascript" src="js/touccarousel.js"></script>
+        
+            
+		<script type="text/javascript">
+            
+			var _gaq = _gaq || [];
+				
+			if (isProdWeb)
+			{
+                _gaq.push(['_setAccount', 'UA-39619730-1']);
+                _gaq.push(['_trackPageview']);
+                
+                (function() {
+                 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                 })();
+			}
+        
+
+        var app = {
+            initialize: function() {
+                
+                console.log("initialize -> isMobileWeb : " + isMobileWeb);
+                
+                if (isMobileWeb)
+                    this.deviceIsReady();
+                else
+                    this.bindEvents();
+            },
+            
+            bindEvents: function() {
+                    document.addEventListener('deviceready', this.deviceIsReady, false);
+            },
+            
+            deviceIsReady: function() {
+                onBodyLoad("Index");
+            },
+        };
+        
+        app.initialize();
+
+		</script>
+
+        
+    </head>
+    
+    
+    <body id="body">
+      
+        <div id="splashScreen">
+            Chargement / loading ...
+        </div>
+    
+    <!------------------------------  Menu & Header ----------------------------------------->
+        
+		<div id="mobileTitle2" class="bgMobileTitle">
+            
+			<div id="mobileTitle2Left">
+			
+				<a href="javascript:back();" id="backBtn">
+				</a>
+								
+			</div>
+
+
+             <h1 id="mobileTitle2Label" onclick="javascript:setScrollToTop(0);">
+				MP2013 entre nature et culture
+			</h1>
+             
+            <!--
+            <h1 id="mobileTitle2Label" onclick="javascript:openOrCloseMenu();">
+                MP2013 entre nature et culture
+            </h1>
+             -->
+            
+			<div id="mobileTitle2Right">
+			
+				<a href="javascript:showMap()" id="showMapBtn">
+					<img src="Assets/btn_localized.png" />
+				</a>
+				
+				<div id="prevNextDetail">
+
+						<a href="javascript:prevNextItemDetail(0)" class="btnPrevNextDetail"></a>
+						<a href="javascript:prevNextItemDetail(1)" class="btnPrevNextDetail"></a>
+
+				</div>
+                
+                <a href="javascript:showPopUpMapSettings()" id="showSettings">
+					<img src="Assets/settings.png" width="44" height="44"/>
+				</a>
+                
+                <a href="javascript:watchPosition(null);" id="showUserPosition">
+					<img src="Assets/IconUserPosition.png" width="44" height="44"/>
+				</a>
+                
+			</div>
+
+		</div>
+
+
+		
+
+		<div id="mainMenu">
+            
+			<div id="listMainMenu" class="corner">
+			</div>
+                 
+			<div id="btnMainMenu"></div>
+	    </div>
+
+        
+		<div id="bgImage">
+            <a href="" id="bgImageTitle"><p></p></a>
+            <a href="" id="trianglePlus"><img src="Assets/trianglePlus.png" /></a>
+        </div>
+        
+        
+        
+        
+        
+        <div id="mainContainer">
+            
+            
+            <!------------------------------  leftHomeSelectionBlock ----------------------------------------->
+            
+<!--
+			<div id="leftHomeSelectionBlock">
+
+                 <div id="activityHome" class="mainHomeTitle" onclick="javascript:showModalPopUp('activityHome')"><img src="Assets/engine/450/Activity.png" class="enginePicto" />
+                 </div>
+                 
+                 <div id="cityHome" class="mainHomeTitle" onclick="javascript:showModalPopUp('cityHome')"><img src="Assets/engine/450/Cible.png" class="enginePicto" />
+                 </div>
+                 
+                 <div id="transportHome" class="mainHomeTitle" onclick="javascript:showModalPopUp('transportHome')"><img src="Assets/engine/450/Transport.png" class="enginePicto" />
+                 </div>
+                 
+                 <div id="timeHome" class="mainHomeTitle" onclick="javascript:showModalPopUp('timeHome')"><img src="Assets/engine/450/Time.png" class="enginePicto" />
+                  </div>
+				
+			</div>
+            
+
+swiper-slide
+    -->
+    
+    
+    <div id="leftHomeSelectionBlock">
+
+    <a href="" class="diapoCategoryArrowLeft"><img src="Assets/arrow_left_grey.png" /></a>
+
+    <div class="swiper-container_home">
+
+        <div class="swiper-wrapper">
+
+            <div id="activityHome" class="swiper-slide mainHomeTitle" onclick="javascript:showModalPopUp('activityHome')">
+                <img src="Assets/engine/450/Activity_fr.png" class="enginePicto" />
+            </div>
+                 
+            <div id="cityHome" class="swiper-slide mainHomeTitle" onclick="javascript:showModalPopUp('cityHome')">
+                <img src="Assets/engine/450/Cible_fr.png" class="enginePicto" />
+            </div>
+
+            <div id="transportHome" class="swiper-slide mainHomeTitle" onclick="javascript:showModalPopUp('transportHome')">
+                <img src="Assets/engine/450/Transport_fr.png" class="enginePicto" />
+            </div>
+
+            <div id="timeHome" class="swiper-slide mainHomeTitle" onclick="javascript:showModalPopUp('timeHome')">
+                <img src="Assets/engine/450/Time_fr.png" class="enginePicto" />
+            </div>
+            
+        </div>
+
+    </div>
+
+    <a href="" class="diapoCategoryArrowRight"><img src="Assets/arrow_right_grey.png" /></a>
+
+    </div>
+
+    
+            
+            
+            
+            
+            <div id="diapoHome">
+                <a href="javascript:setMainSelectionItemsList('MyFavorites')" id="diapoHomeBtn0" class="diapoHomeBtn"><img src="Assets/homeBtn/Like2.png" /></a>
+                <a href="javascript:setMainSelectionItemsList('Classics')" id="diapoHomeBtn1" class="diapoHomeBtn"><img src="Assets/homeBtn/Star2.png" /></a>
+                <a href="javascript:setMainSelectionItemsList('Favorites')" id="diapoHomeBtn2" class="diapoHomeBtn"><img src="Assets/homeBtn/Coeur2.png" /></a>
+                <a href="javascript:setMainSelectionItemsList('BestViews')" id="diapoHomeBtn3" class="diapoHomeBtn"><img src="Assets/homeBtn/Vue2.png" /></a>
+                <!--
+                 <div onclick="javascript:setHomePicturesSlider(3)" id="diapoHomeBtn3" class="diapoHomeBtn"><img src="Assets/homeBtn/Drink.png" /></div>
+                 -->
+            </div>
+            
+            
+            <!------------------------------  Item list   ----------------------------------------->
+            
+			<div id="itemListOptions" class="itemListOptions right">
+                
+                <div id="itemListOptionsBtn">
+                    
+                    <!--
+                    <a id="btnDateMP2013" class="btnFilterMP2013" href="javascript:showModalPopUp('datePicker');">
+						Date
+                    </a>
+                    <a id="btnTypeMP2013" class="btnFilterMP2013" href="javascript:showModalPopUp('typeMP2013');">
+                        Genres
+                    </a>
+					<a id="btnFilterMP2013" class="btnFilterMP2013" href="javascript:showModalPopUp('expoFilter');">
+                        Filtres
+                    </a>
+					<a id="btnFreeMP2013" class="btnFilterMP2013" href="javascript:launchFreeMP2013();">
+                        Gratuit
+                    </a>
+                    -->
+                    
+                    <a id="quoiBtnList" class="btnMainFilterList" href="javascript:showModalPopUp('activityHome');">
+						<img src="Assets/engine/gris/Activity.png" />
+                    </a>
+                    <a id="ouBtnList" class="btnMainFilterList" href="javascript:showModalPopUp('cityHome');">
+                        <img src="Assets/engine/gris/Cible.png" />
+                    </a>
+					<a id="commentBtnList" class="btnMainFilterList" href="javascript:showModalPopUp('transportHome');">
+                        <img src="Assets/engine/gris/Transport.png" />
+                    </a>
+					<a id="dureeBtnList" class="btnMainFilterList" href="javascript:showModalPopUp('timeHome');">
+                        <img src="Assets/engine/gris/Time.png" />
+                    </a>
+                    
+				</div>
+				
+                <a id="trierBtnItemList" class="trierBtnItemList corner" href="javascript:showTrierOptions();">
+                    Trier
+                </a>
+                
+                <input id="searchForm" name="searchForm" type="text" size="32" value="Recherche..." class="searchForm corner" onKeyUp="javascript:setFilteredItemList()" style="width:30%;" />
+                
+                <div id="switchSmallBig" >
+                    <a href="javascript:switchSmallBig('Small')" id="switchSmall"></a>
+                    <a href="javascript:switchSmallBig('Big')" id="switchBig"></a>
+                </div>
+                
+                <a id="reverseListItem" href="javascript:reverseOrderListItems()"></a>
+                
+                
+                
+                <div id="trierOptions"></div>
+                
+			</div>
+			
+            
+			<div id="itemList" class="itemListHome">
+			</div>
+            
+            
+            <div id="itemListBottomBtn">
+                <a href="javascript:setNextResultForItemList();" id="itemListBottomBtnNextResults" class="">Afficher les résultats suivants</a>
+			</div>
+            
+            
+            <!------------------------------  block map  ----------------------------------------->
+            
+            <div id="blockMap" class="corner">
+                
+                <div id="mapList" class="corner">
+                </div>
+
+            </div>
+            
+            
+            <!------------------------------  Item detail ----------------------------------------->
+            
+            <div id="itemDetail" class="itemDetail corner itemDetailHome" >
+                
+                <div id="mainVisual" class="mainVisual"></div>
+                
+                <div id="blockLinkDetail" class="" style="">
+                    
+                    <a href="javascript:showMap('IGN')" id="btnIGNdetail" class="btnLinkDetail">
+                        <img src="Assets/icon_itinary.png" width="32" height="32" />
+                        <span id="spanIGNdetail">Tracé IGN</span>
+                    </a>
+                    
+                    <a href="javascript:showCloseItemBlock()" id="closeLinkDetail" class="btnLinkDetail">
+                        <img src="Assets/icon_close.png" width="25" height="25" style="margin-right:7px;" />
+                        <span id="spanClosedetail">A proximité</span>
+                    </a>
+                    
+                    <a href="javascript:showMap('Itinary')" class="btnLinkDetail">
+                        <img src="Assets/icon_geoloc3.png" width="25" height="25" />
+                        <span id="spanMapdetail">Plan / itinéraire</span>
+                    </a>
+                    
+                    <a href="javascript:setDetailsPicturesSliderFull(null)" class="btnLinkDetail" id="diaporamaBtn">
+                        <img src="Assets/icon_diapo4.png" width="28" height="28" />
+                        <span id="spanDiaporamadetail">Diaporama</span>
+                    </a>
+                    
+                    <a href="javascript:addOrRemoveFavorite()" id="favoriteDetailLink" class="btnLinkDetail">
+                        <img id="iconFavorite" src="Assets/icon_favorite_add.png" width="25" height="25" style="margin-right:7px;" />
+                        <span id="addFavorite">Favoris</span>
+                    </a>
+                    
+                    <a href="javascript:showModalPopUp('infosTransport')" class="btnLinkDetail">
+                        <img src="Assets/icon_transport.png" width="25" height="25" />
+                        <span id="transportBtn">Infos transport</span>
+                    </a>
+                    
+                    <a href="javascript:showModalPopUp('infosPratiques')" class="btnLinkDetail" id="infosBtn" style="padding-right:0px;">
+                        <img src="Assets/icon_info.png" width="25" height="25" />
+                        <span id="spanInfosPratiquesdetail">Infos pratiques</span>
+                    </a>
+                    
+                </div>
+                
+                <div id="blocTextDetail" class="blocTextDetail">
+                    <p id="city">
+                    </p>
+                    <p id="massif">
+                    </p>
+                    <p id="type">
+                    </p>
+                    <p id="presentation">
+                    </p>
+                </div>
+                
+                <a id="accessMassifBtn" class="genericMP2013Btn corner" href="javascript:showModalPopUp('accesMassif');">Réglemementation de l'accès aux massifs des Bouches-du-Rhône</a>
+                
+                <div id="closeLinkTitle">A Voir / A faire</div>
+                <div id="closeLinkBlock"></div>
+                
+            </div>
+            
+            
+            <!------------------------------  Options ----------------------------------------->
+            
+            <div id="leftHomeOptionBlock">
+                <h2 id="closeLabel" class="bgHorizontalGradientGrayLight corner">A PROXIMITÉ</h2>
+                <a href="javascript:showMap('closeMap');" id="optionMapBtn"><img src="Assets/btn_localized.png" /></a>
+                <div id="homeSliderItems" class="optionsSliderHome corner"></div>
+                <div id="homeSliderMP2013" class="optionsSliderHome corner"></div>
+                <div id="homeSliderRestaurants" class="optionsSliderHome corner"></div>
+                <div id="homeSliderHotels" class="optionsSliderHome corner"></div>
+                <div id="homeSliderServices" class="optionsSliderHome corner"></div>
+            </div>
+            
+            <!------------------------------  End container -----------------------------------------> 
+            
+        </div>
+
+        <div id="bugScrollPositionFixed"></div>
+    
+        <!------------------------------  diaporamaFull ----------------------------------------->
+        
+
+        <div id="diaporamaFull">
+            
+        </div>
+
+        <!------------------------------  diaporamaFull ----------------------------------------->
+        
+
+        <div id="modalPopUp" class="bgWhiteToUltraLightGray">
+            
+        </div>
+        
+    </body>
+</html>

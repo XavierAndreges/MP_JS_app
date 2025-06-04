@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+    <head>
+        <title>Contact - Marseille Provence</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta charset="UTF-8" />
+            
+        <meta name="description" content="Plan du site www.marseilleprovence.net" />
+		
+        <link rel="stylesheet" href="CSS/jquery.mCustomScrollbar.css" />
+        <link rel="stylesheet" href="CSS/photoswipe.css" />
+		
+        <link rel="stylesheet" href="CSS/styles.css" />
+		<link href="CSS/ui-darkness/jquery-ui-1.10.1.custom.css" rel="stylesheet" />
+        
+        <link rel="stylesheet" href="leaflet/leaflet.css" />
+        
+        <!--[if lte IE 8]><link rel="stylesheet" href="leaflet/leaflet.ie.css" /><![endif]-->
+        
+        <link rel="stylesheet" href="CSS/common.css" /><link rel="stylesheet" href="CSS/itemList.css" /><link rel="stylesheet" href="CSS/itemDetail.css" /><link rel="stylesheet" href="CSS/map.css" /><link rel="stylesheet" href="CSS/media_queries.css" /><link rel="stylesheet" href="CSS/gradient.css" />
+        
+        <link rel="alternate" hreflang="en" href="http://www.lajouquasse.fr/marseilleprovence/index.html#en" />
+        <link rel="alternate" hreflang="de" href="http://www.lajouquasse.fr/marseilleprovence/index.html#de" />
+        <link rel="alternate" hreflang="es" href="http://www.lajouquasse.fr/marseilleprovence/index.html#es" />
+        
+        <script type="text/javascript" src="jquery/jquery.js"></script>
+        
+        <script type="text/javascript" src="hammer/hammer_v1_0_5.js"></script>
+        <script type="text/javascript" src="hammer/jquery.hammer.js"></script>
+        
+        <script type="text/javascript" src="jquery/klass.min.js"></script>
+        <script type="text/javascript" src="jquery/code.photoswipe-3.0.5.js"></script>
+        
+		<script src="jquery/jquery-ui-1.8.23.custom.min.js"></script>
+		<script src="jquery/jquery.mousewheel.min.js"></script>
+		<script src="jquery/jquery.mCustomScrollbar.js"></script>
+		
+		<script src="jquery/jquery-ui-1.10.1.custom.js"></script>
+        
+        <script type="text/javascript" src="leaflet/leaflet.js"></script>
+        <script type="text/javascript" src="js/SQLitePlugin.js"></script>
+        <!--<script type="text/javascript" src="js/cordova.js"></script><script type="text/javascript" src="js/GAPlugin.js"></script>-->
+        
+        <script type="text/javascript" src="js/myScript/var.js"></script><script type="text/javascript" src="js/myScript/model.js"></script><script type="text/javascript" src="js/myScript/popUp.js"></script><script type="text/javascript" src="js/myScript/mainScript.js"></script><script type="text/javascript" src="js/myScript/ImageManager.js"></script><script type="text/javascript" src="js/myScript/photoSwipe.js"></script><script type="text/javascript" src="js/myScript/localisable.js"></script><script type="text/javascript" src="js/myScript/language.js"></script><script type="text/javascript" src="js/myScript/distance.js"></script><script type="text/javascript" src="js/myScript/menu.js"></script><script type="text/javascript" src="js/myScript/transitions.js"></script><script type="text/javascript" src="js/myScript/trier.js"></script><script type="text/javascript" src="js/myScript/itemList.js"></script><script type="text/javascript" src="js/myScript/itemDetail.js"></script><script type="text/javascript" src="js/myScript/mapItems.js"></script><script type="text/javascript" src="js/myScript/mapIGN.js"></script><script type="text/javascript" src="js/myScript/SliderReduceScreen.js"></script><script type="text/javascript" src="js/myScript/SliderMediumScreen.js"></script><script type="text/javascript" src="js/myScript/sliderFullScreen.js"></script><script type="text/javascript" src="js/myScript/HtmlSliderReduceScreen.js"></script><script type="text/javascript" src="js/myScript/spatialite.js"></script><script type="text/javascript" src="js/myScript/dataMP13.js"></script><script src="js/myScript/randoGeoJSON.js"></script><script src="js/myScript/canyonsGeoJSON.js"></script><script src="js/myScript/escaladeGeoJSON.js"></script><script type="text/javascript" src="js/myScript/dataCDT.js"></script><script type="text/javascript" src="js/myScript/dataMPM.js"></script>
+        
+        <script type="text/javascript" src="js/utils.js"></script>
+		<script type="text/javascript" src="js/InfoBubble.js"></script>
+		
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+
+                if (isProdWeb)
+                {
+                    _gaq.push(['_setAccount', 'UA-39619730-1']);
+                    _gaq.push(['_trackPageview']);
+                    
+                    (function() {
+                     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                     })();
+                }
+            
+            var app = {
+                initialize: function() {
+                    
+                    console.log("initialize -> isMobileWeb : " + isMobileWeb);
+                    
+                    if (isMobileWeb)
+                    this.deviceIsReady();
+                    else
+                    this.bindEvents();
+                },
+                
+                bindEvents: function() {
+                    document.addEventListener('deviceready', this.deviceIsReady, false);
+                },
+                
+                deviceIsReady: function() {
+                    onBodyLoad("Contact");
+                },
+            };
+            
+            app.initialize();
+            
+            
+            </script>
+
+    </head>
+	
+    <body id="body">
+        
+        
+        <div id="splashScreen">
+        </div>
+
+        
+        <!------------------------------  Menu & Header ----------------------------------------->
+        
+        <div id="mobileTitle2" class="bgMobileTitle">
+            
+            <div id="mobileTitle2Left">
+                <a href="javascript:back();" id="backBtn">
+                </a>
+			</div>
+            
+			<h1 id="mobileTitle2Label" onclick="setScrollToTop(0);">
+                Contact / Crédits
+			</h1>
+            
+			<div id="mobileTitle2Right">
+			</div>
+            
+        </div>
+		
+		<div id="mainMenu">
+			<div id="listMainMenu" class="corner">
+                <div id="tabBarMenu" style="width:100%; display:inline-block; margin:10px 0px">
+                    <a id="tabBarMenu0" class="tabBarMenuBtnDetail" href="javascript:setTabBarMenuBtnWithPosition(0)">
+                        Navigation
+                    </a>
+                    <a id="tabBarMenu1" class="tabBarMenuBtnDetail" href="javascript:setTabBarMenuBtnWithPosition(1)">
+                        Langues
+                    </a>
+                </div>
+
+			</div>
+            
+			<div id="btnMainMenu"></div>
+	    </div>
+
+            
+		<div id="bgImage"></div>
+		
+        
+		<div id="mainContainer">
+		
+            <!------------------------------  Plan du site ----------------------------------------->
+            
+            
+            
+            <div id="siteMap">
+                
+                
+                    
+                <h3 class="textColorMP2013">Version 2.0</h3>
+                    
+                <br>
+                
+                <div id="infosContact">
+                    
+                    <span class="textColorRestaurants"><ins><strong>Contact :</strong></ins></span>
+                    <br><br>
+                    Pour tous renseignements, suggérer un article ou signaler une erreur, merci d'envoyer un mail à l'adresse suivante :<br>
+                    
+                    <div id="address">
+                    </div>
+                    
+                    <br>
+                    
+                    <span class="textColorRestaurants"><ins><strong>Copyright :</strong></ins></span>
+                    
+                    
+                    <br><br>
+                    Application conçue et réalisée par <strong>Xavier Andrèges</strong>.
+                    <br><br>
+                    A l'exception des bases Open data, l'ensemble des données et images utilisées sont la propriété exclusive de Xavier Andrèges.<br>
+                    Toute reproduction, même partielle, est complètement interdite et fera l'objet de poursuites conformément au droit sur la propriété intellectuelle.
+                    <br><br>
+                    
+                </div>
+                
+                <div id="partenariatBDRT" style="display:inline-block;">
+                    
+                    <span class="textColorRestaurants"><ins><strong>Partenariat :</strong></ins></span>
+                    <br><br>
+                    Cette application est soutenue par <strong>Bouches-du-Rhône Tourisme</strong>.
+                    <br><br>
+                    <img src="Assets/Bouches-du-Rhone-Tourisme.png" width="100" height="100" />
+                    <br><br>
+                    Les données libérées fournies par le service Open data de Bouches-du-Rhône Tourisme sont disponibles à l'adresse suivante : <a href="http://data.visitprovence.com" target="_blank"> data.visitprovence.com</a>
+                    <img src="Assets/data_visitprovence.jpg" style="width:280px; height: auto;"  />
+                    <br><br>
+                    Précisemment, les bases Open data exploitées sont les suivantes :
+                    <br>
+                    - Accompagnateur en montagne et guide d'escalade
+                    <br>
+                    - Agences réceptives
+                    <br>
+                    - Campings car
+                    <br>
+                    - Campings
+                    <br>
+                    - Chambres d'hôte
+                    <br>
+                    - Gites
+                    <br>
+                    - Services de guide
+                    <br>
+                    - Hôtels
+                    <br>
+                    - Location de vélo
+                    <br>
+                    - Parc acrobatiques forestiers
+                    <br>
+                    - Résidences de tourisme
+                    <br>
+                    - Résidences hôtelieres
+                    <br>
+                    - Restaurants
+                    <br>
+                    - Stations de métro et tramway
+                    <br><br>
+                    
+                </div>
+                
+                 
+            </div>
+            
+            <!------------------------------  End container ----------------------------------------->
+  
+        </div>
+        
+        <div id="bugScrollPositionFixed"></div>
+        
+        <div id="modalPopUp" class="bgWhiteToUltraLightGray">
+        </div>
+
+    </body>
+</html>
