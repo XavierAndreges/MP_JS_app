@@ -1,100 +1,156 @@
 <?php
+// Enable error reporting for debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-require ('mpIdentifier.php');
-require ('closeLinkArray.php');
-require ('getDiapoHomeArray.php');
-require ('getOrdersList.php');
+// Set up error logging
+ini_set('log_errors', 1);
+ini_set('error_log', dirname(__FILE__) . '/error.log');
 
+// Function to log errors
+function logError($message, $error = null) {
+    $logMessage = date('Y-m-d H:i:s') . " - " . $message;
+    if ($error) {
+        $logMessage .= " - Error: " . $error->getMessage();
+    }
+    error_log($logMessage);
+}
+
+// Check if required files exist
+$requiredFiles = ['mpIdentifier.php', 'closeLinkArray.php', 'getDiapoHomeArray.php', 'getOrdersList.php'];
+foreach ($requiredFiles as $file) {
+    if (!file_exists($file)) {
+        logError("Required file missing: " . $file);
+        header('HTTP/1.1 500 Internal Server Error');
+        die('Required file missing: ' . $file);
+    }
+}
+
+// Load required files
+try {
+    require ('mpIdentifier.php');
+    require ('closeLinkArray.php');
+    require ('getDiapoHomeArray.php');
+    require ('getOrdersList.php');
+} catch (Exception $e) {
+    logError("Error loading required files", $e);
+    header('HTTP/1.1 500 Internal Server Error');
+    die('Error loading required files');
+}
 
 header('Content-type: application/javascript');
 header('Access-Control-Allow-Origin: *');
 
+try {
+    // Validate required GET parameters
+    if (!isset($_GET['version'])) {
+        logError("Missing required parameter: version");
+        header('HTTP/1.1 400 Bad Request');
+        die('Missing required parameter: version');
+    }
 
-try
-	{
-		$PDOMySQL = new PDO( MYSQL_DSN, MYSQL_USER, MYSQL_PASSWORD, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
-		$PDOMySQL -> setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    if (!isset($_GET['versionItemsToPush'])) {
+        logError("Missing required parameter: versionItemsToPush");
+        header('HTTP/1.1 400 Bad Request');
+        die('Missing required parameter: versionItemsToPush');
+    }
 
-        global $versionItemsToPush;
-        global $version;
-        
-        /*
-        $url = "http://www.marseilleprovence.net";
-        $smallSize = "160";
-        $mediumSize = "320";
-        
-        $pictures = array();
-         */
-        
-        //init version - dont't change
-        $version = 1.2;
-        
-        if (isset($_GET['version']))
-            $version = (float) $_GET['version'];
+    // Validate database connection parameters
+    if (!defined('MYSQL_DSN') || !defined('MYSQL_USER') || !defined('MYSQL_PASSWORD')) {
+        logError("Database configuration missing");
+        header('HTTP/1.1 500 Internal Server Error');
+        die('Database configuration error');
+    }
 
-        //************
-        
-		$update = array();
-        
-        $update['version'] = 2.0;
-        
-        $update['title_fr'] = "Nouvelle version 2.0 disponible";
-        $update['title_en'] = "New version 2.0 available";
+    $PDOMySQL = new PDO(MYSQL_DSN, MYSQL_USER, MYSQL_PASSWORD, array(
+        PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+    ));
+
+    global $versionItemsToPush;
+    global $version;
+    
+    /*
+    $url = "http://www.marseilleprovence.net";
+    $smallSize = "160";
+    $mediumSize = "320";
+    
+    $pictures = array();
+     */
+    
+    //init version - dont't change
+    $version = 1.2;
+    
+    if (isset($_GET['version']))
+        $version = (float) $_GET['version'];
+
+    //************
+    
+    $update = array();
+    
+    $update['version'] = 2.0;
+    
+    $update['title_fr'] = "Nouvelle version 2.0 disponible";
+    $update['title_en'] = "New version 2.0 available";
 
 
-        $update['message_fr'] = "Nouvelles fonctionnalités, nouveau design !<br>La mise à jour sera nécessaire pour continuer à recevoir tous les nouveaux articles.<br>Soutaitez-vous l'installer maintenant ?";
-        $update['message_en'] = "New features, new design !<br> The update ot the app will be necessary to keep receiving all the new articles.<br>Do you want to install it now?";
+    $update['message_fr'] = "Nouvelles fonctionnalités, nouveau design !<br>La mise à jour sera nécessaire pour continuer à recevoir tous les nouveaux articles.<br>Soutaitez-vous l'installer maintenant ?";
+    $update['message_en'] = "New features, new design !<br> The update ot the app will be necessary to keep receiving all the new articles.<br>Do you want to install it now?";
+    
+    $update['itemsToPush'] = getItemsToUpdateByVersion($PDOMySQL, $version);
         
-        $update['itemsToPush'] = getItemsToUpdateByVersion($PDOMySQL, $version);
-            
-        $update['versionItemsToPush'] = $versionItemsToPush;
+    $update['versionItemsToPush'] = $versionItemsToPush;
+    
+    $update['orderItemsArray'] = getOrderItemsArray($version);
+    
+    $update['closeLinkArray'] = $closeLinkArray;
+    
+    
+    if ($version >= 2)
+    {
+        if (count(getDiapoHomeArray()) > 0)
+            $update['diapoHomeArray'] = getDiapoHomeArray();
         
-        $update['orderItemsArray'] = getOrderItemsArray($version);
+        if (count(getItemsHomeArray()) > 0)
+            $update['itemsHomeArray'] = getItemsHomeArray();
         
-        $update['closeLinkArray'] = $closeLinkArray;
+        if (count(getClassics()) > 0)
+            $update['classicsArray'] = getClassics();
         
+        if (count(getFavorites()) > 0)
+            $update['favoritesArray'] = getFavorites();
         
-        if ($version >= 2)
-        {
-            if (count(getDiapoHomeArray()) > 0)
-                $update['diapoHomeArray'] = getDiapoHomeArray();
-            
-            if (count(getItemsHomeArray()) > 0)
-                $update['itemsHomeArray'] = getItemsHomeArray();
-            
-            if (count(getClassics()) > 0)
-                $update['classicsArray'] = getClassics();
-            
-            if (count(getFavorites()) > 0)
-                $update['favoritesArray'] = getFavorites();
-            
-            if (count(getBestViews()) > 0)
-                $update['bestViewsArray'] = getBestViews();
-            
-            if (count(getItemsToDelete()) > 0)
-                $update['itemsToDelete'] = getItemsToDelete();
-            
-            if (count(getOrderListArray()) > 0)
-                $update['orderListArray'] = getOrderListArray();
-        }
-        else
-        {
-            $update['diapoHomeArray1'] = getDiapoHomeArray1();
-            
-            $update['diapoHomeArray2'] = getDiapoHomeArray2();
-            
-            $update['diapoHomeArray3'] = getDiapoHomeArray3();
-            
-            $update['myRestoArray'] = getRestosArray();
-        }
+        if (count(getBestViews()) > 0)
+            $update['bestViewsArray'] = getBestViews();
+        
+        if (count(getItemsToDelete()) > 0)
+            $update['itemsToDelete'] = getItemsToDelete();
+        
+        if (count(getOrderListArray()) > 0)
+            $update['orderListArray'] = getOrderListArray();
+    }
+    else
+    {
+        $update['diapoHomeArray1'] = getDiapoHomeArray1();
+        
+        $update['diapoHomeArray2'] = getDiapoHomeArray2();
+        
+        $update['diapoHomeArray3'] = getDiapoHomeArray3();
+        
+        $update['myRestoArray'] = getRestosArray();
+    }
 
-        echo 'var updateData = '.json_encode($update).';';
-        
-	}
-catch( PDOException $e)
-	{
-	    echo $e -> getMessage( );
-	}
+    echo 'var updateData = '.json_encode($update).';';
+    
+} catch (PDOException $e) {
+    logError("Database error", $e);
+    header('HTTP/1.1 500 Internal Server Error');
+    die('Database error occurred');
+} catch (Exception $e) {
+    logError("General error", $e);
+    header('HTTP/1.1 500 Internal Server Error');
+    die('An error occurred');
+}
 
 
 function getItemsToUpdateByVersion($PDOMySQL, $version)
@@ -474,30 +530,54 @@ function getItemsToUpdateByVersion($PDOMySQL, $version)
 
 
 
-function getItem($PDOMySQL, $table, $idRepName)
-{
-    $sql = "select * from ".$table." WHERE idRepName='".$idRepName."'";
-    $PDOreq	= $PDOMySQL -> query($sql);
-    $itemArray = $PDOreq -> fetchAll(PDO::FETCH_ASSOC);
-    //var_dump($canyon).'<br/>';
+function getItem($PDOMySQL, $table, $idRepName) {
+    try {
+        // Validate input parameters
+        if (empty($table) || empty($idRepName)) {
+            logError("Invalid parameters in getItem: table or idRepName is empty");
+            throw new Exception("Invalid parameters");
+        }
 
-    $tabDiapo = array();
-    
-    $sqlPicture = "select name from Pictures where idRepName='".$idRepName."'";
-    $PDOreq	= $PDOMySQL -> query($sqlPicture);
-    $pictureArray = $PDOreq -> fetchAll(PDO::FETCH_ASSOC);
+        // Sanitize table name to prevent SQL injection
+        $allowedTables = ['PlageBaignadePiscine', 'BonsPlans', 'ExpositionsMusees', 'SitesNaturels', 
+                         'Monuments', 'Canyons', 'Randonnee', 'SitesEscalade', 'Restos', 'Loisirs', 
+                         'Shopping', 'Dormir', 'Circuits', 'Sortir'];
+        if (!in_array($table, $allowedTables)) {
+            logError("Invalid table name: " . $table);
+            throw new Exception("Invalid table name");
+        }
 
+        $sql = "SELECT * FROM " . $table . " WHERE idRepName = :idRepName";
+        $stmt = $PDOMySQL->prepare($sql);
+        $stmt->execute(['idRepName' => $idRepName]);
+        $itemArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        if (empty($itemArray)) {
+            logError("No data found for table: " . $table . ", idRepName: " . $idRepName);
+            return null;
+        }
+
+        $tabDiapo = array();
         
-    for ($l = 0; $l < count($pictureArray); $l++)
-    {
-        array_push($tabDiapo, $pictureArray[$l]['name']);
+        $sqlPicture = "SELECT name FROM Pictures WHERE idRepName = :idRepName";
+        $stmt = $PDOMySQL->prepare($sqlPicture);
+        $stmt->execute(['idRepName' => $idRepName]);
+        $pictureArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($pictureArray as $picture) {
+            array_push($tabDiapo, $picture['name']);
+        }
+        
+        $itemArray[0]["tabDiapo"] = $tabDiapo;
+        
+        return $itemArray[0];
+    } catch (PDOException $e) {
+        logError("Database error in getItem", $e);
+        throw $e;
+    } catch (Exception $e) {
+        logError("Error in getItem", $e);
+        throw $e;
     }
-        
-    $itemArray[0]["tabDiapo"] = $tabDiapo;
-
-    //echo 'var listItems'.$table.' = '.json_encode($itemArray).';';
-    
-    return $itemArray[0];
 }
 
 ?>

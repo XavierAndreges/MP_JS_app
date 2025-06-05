@@ -1,11 +1,12 @@
 /***************** started var ************************/
 
 var GOOGLE_MAP_KEY = window.GOOGLE_MAP_KEY || '';
-var urlPictures = "../marseilleprovence_pictures" ;
 
 var isProd = false;
 var isMobileTest = false;
 var isProdWeb = true;
+
+var urlPictures = isProdWeb ? "../marseilleprovence_pictures" : "../pictures";
 
 var version = 2.0;
 var currentLang = "fr";
